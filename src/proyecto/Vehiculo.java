@@ -9,5 +9,6 @@ package proyecto;
  * @author diego
  */
 public class Vehiculo {
+ 
     
 }
