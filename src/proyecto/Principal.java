@@ -26,73 +26,163 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPopupMenu1 = new javax.swing.JPopupMenu();
-        jPopupMenu2 = new javax.swing.JPopupMenu();
-        jPopupMenu3 = new javax.swing.JPopupMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        menuBar1 = new java.awt.MenuBar();
-        menu1 = new java.awt.Menu();
-        menu2 = new java.awt.Menu();
-        menuBar2 = new java.awt.MenuBar();
-        menu3 = new java.awt.Menu();
-        menu4 = new java.awt.Menu();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-
-        jMenuItem1.setText("jMenuItem1");
-
-        jMenu4.setText("File");
-        jMenuBar2.add(jMenu4);
-
-        jMenu5.setText("Edit");
-        jMenuBar2.add(jMenu5);
-
-        menu1.setLabel("File");
-        menuBar1.add(menu1);
-
-        menu2.setLabel("Edit");
-        menuBar1.add(menu2);
-
-        menu3.setLabel("File");
-        menuBar2.add(menu3);
-
-        menu4.setLabel("Edit");
-        menuBar2.add(menu4);
+        jButton1 = new javax.swing.JButton();
+        ConsultaClientes = new javax.swing.JButton();
+        ConsultaSolicitudes = new javax.swing.JButton();
+        Analisis = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar9 = new javax.swing.JMenuBar();
+        MenuClientes = new javax.swing.JMenu();
+        RegistrarCliente = new javax.swing.JMenuItem();
+        ModificarCliente = new javax.swing.JMenuItem();
+        EliminarCliente = new javax.swing.JMenuItem();
+        MenuVehiculos = new javax.swing.JMenu();
+        RegistrarVehiculo = new javax.swing.JMenuItem();
+        ModificarVehiculo = new javax.swing.JMenuItem();
+        EliminarVehiculo = new javax.swing.JMenuItem();
+        MenuAlquiler = new javax.swing.JMenu();
+        SolicitarAlquiler = new javax.swing.JMenuItem();
+        DevolucionVehiculo = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jButton1.setText("Catalogo de Vehiculos");
 
-        jMenu1.setText("Clientes");
-        jMenuBar1.add(jMenu1);
+        ConsultaClientes.setText("Consulta de Clientes");
+        ConsultaClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConsultaClientesActionPerformed(evt);
+            }
+        });
 
-        jMenu2.setText("Vehiculos");
-        jMenuBar1.add(jMenu2);
+        ConsultaSolicitudes.setText("Consulta de Solicitudes");
+        ConsultaSolicitudes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConsultaSolicitudesActionPerformed(evt);
+            }
+        });
 
-        jMenu3.setText("Rentar");
-        jMenuBar1.add(jMenu3);
+        Analisis.setText("Analisis");
 
-        setJMenuBar(jMenuBar1);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel1.setText("RentaCar ");
+
+        MenuClientes.setText("Clientes");
+
+        RegistrarCliente.setText("Registrar");
+        RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarClienteActionPerformed(evt);
+            }
+        });
+        MenuClientes.add(RegistrarCliente);
+
+        ModificarCliente.setText("Modificar");
+        ModificarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarClienteActionPerformed(evt);
+            }
+        });
+        MenuClientes.add(ModificarCliente);
+
+        EliminarCliente.setText("Eliminar");
+        EliminarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarClienteActionPerformed(evt);
+            }
+        });
+        MenuClientes.add(EliminarCliente);
+
+        jMenuBar9.add(MenuClientes);
+
+        MenuVehiculos.setText("Vehiculos");
+
+        RegistrarVehiculo.setText("Registrar");
+        MenuVehiculos.add(RegistrarVehiculo);
+
+        ModificarVehiculo.setText("Modificar");
+        MenuVehiculos.add(ModificarVehiculo);
+
+        EliminarVehiculo.setText("Eliminar");
+        MenuVehiculos.add(EliminarVehiculo);
+
+        jMenuBar9.add(MenuVehiculos);
+
+        MenuAlquiler.setText("Alquiler");
+
+        SolicitarAlquiler.setText("Solicitar Alquiler");
+        MenuAlquiler.add(SolicitarAlquiler);
+
+        DevolucionVehiculo.setText("Devolucion");
+        MenuAlquiler.add(DevolucionVehiculo);
+
+        jMenuBar9.add(MenuAlquiler);
+
+        setJMenuBar(jMenuBar9);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 735, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ConsultaClientes)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(Analisis)))
+                        .addContainerGap(331, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ConsultaSolicitudes)
+                        .addGap(79, 79, 79))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(308, 308, 308)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 481, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel1)
+                .addGap(148, 148, 148)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConsultaSolicitudes)
+                    .addComponent(ConsultaClientes)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addComponent(Analisis)
+                .addGap(108, 108, 108))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegistrarClienteActionPerformed
+
+    private void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModificarClienteActionPerformed
+
+    private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarClienteActionPerformed
+
+    private void ConsultaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConsultaClientesActionPerformed
+
+    private void ConsultaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaSolicitudesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,23 +220,22 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JPopupMenu jPopupMenu2;
-    private javax.swing.JPopupMenu jPopupMenu3;
-    private java.awt.Menu menu1;
-    private java.awt.Menu menu2;
-    private java.awt.Menu menu3;
-    private java.awt.Menu menu4;
-    private java.awt.MenuBar menuBar1;
-    private java.awt.MenuBar menuBar2;
+    private javax.swing.JButton Analisis;
+    private javax.swing.JButton ConsultaClientes;
+    private javax.swing.JButton ConsultaSolicitudes;
+    private javax.swing.JMenuItem DevolucionVehiculo;
+    private javax.swing.JMenuItem EliminarCliente;
+    private javax.swing.JMenuItem EliminarVehiculo;
+    private javax.swing.JMenu MenuAlquiler;
+    private javax.swing.JMenu MenuClientes;
+    private javax.swing.JMenu MenuVehiculos;
+    private javax.swing.JMenuItem ModificarCliente;
+    private javax.swing.JMenuItem ModificarVehiculo;
+    private javax.swing.JMenuItem RegistrarCliente;
+    private javax.swing.JMenuItem RegistrarVehiculo;
+    private javax.swing.JMenuItem SolicitarAlquiler;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuBar jMenuBar9;
     // End of variables declaration//GEN-END:variables
 }
