@@ -29,15 +29,18 @@ public class Pila {
         this.largo++;
     }
     
-    public void mostrar(){
+    public void mostrar(int cedula){
         // Crea una copia de la pila.
         Nodo1 aux = cima;
         String output="";
         // Recorre la pila hasta el ultimo node.
         while(aux != null){
-            output += "| Nombre: "+aux.getCliente().getNombre()+" | "
+            if(cedula == aux.getCliente().getCedula()){
+                output += "| Nombre: "+aux.getCliente().getNombre()+" | "
                        + "Cedula: "+aux.getCliente().getCedula();
-            aux = aux.getSiguiente();
+                aux = null;
+            }else{
+            aux = aux.getSiguiente(); }
         }
         JOptionPane.showMessageDialog(null,output);
     }
