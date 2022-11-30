@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -14,10 +16,9 @@ public class Pila {
     
     public boolean Vacia(){ return cima == null;}
     
-    public void push(Clientes cliente){
-        Nodo1 newNode = new Nodo1();
-        newNode.setValor(valor);
-        
+    public void push(Cliente cliente){
+        Nodo1 newNode = new Nodo1(cliente);
+                
         if (this.Vacia()){
             this.cima = newNode;
         }
@@ -26,6 +27,19 @@ public class Pila {
             this.cima = newNode;
         }
         this.largo++;
+    }
+    
+    public void mostrar(){
+        // Crea una copia de la pila.
+        Nodo1 aux = cima;
+        String output="";
+        // Recorre la pila hasta el ultimo node.
+        while(aux != null){
+            output += "| Nombre: "+aux.getCliente().getNombre()+" | "
+                       + "Cedula: "+aux.getCliente().getCedula();
+            aux = aux.getSiguiente();
+        }
+        JOptionPane.showMessageDialog(null,output);
     }
     
 }

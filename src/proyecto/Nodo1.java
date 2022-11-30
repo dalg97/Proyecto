@@ -10,8 +10,12 @@ package proyecto;
  */
 public class Nodo1 {
     private Cliente cliente;
-    private Nodo1 next;
+    private Nodo1 siguiente;
 
+    public Nodo1(Cliente cliente){
+        this.cliente = cliente;
+    }
+    
     public Cliente getCliente() {
         return cliente;
     }
@@ -20,12 +24,12 @@ public class Nodo1 {
         this.cliente = cliente;
     }
 
-    public Nodo1 getNext() {
-        return next;
+    public Nodo1 getSiguiente() {
+        return siguiente;
     }
 
-    public void setNext(Nodo1 next) {
-        this.next = next;
+    public void setSiguiente(Nodo1 siguiente) {
+        this.siguiente = siguiente;
     }
     
     
