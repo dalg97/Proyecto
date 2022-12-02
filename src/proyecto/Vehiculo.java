@@ -9,6 +9,7 @@ package proyecto;
  * @author diego
  */
 public class Vehiculo {
+    //Atributos del Vehiculo
     private String placa;
     private String marca;
     private int anio;
@@ -20,6 +21,7 @@ public class Vehiculo {
     private String extras;
     private String estado;
     
+    //Constructor
     public Vehiculo(String placa,String marca,int anio,String color,
             int cilindrada,String combustible,int pasajeros,int precio,
             String extras,String estado){
@@ -34,6 +36,7 @@ public class Vehiculo {
             this.extras = extras;
             this.estado = estado;
     }
+    //Setters and Getters
     public String getPlaca() {
         return placa;
     }
@@ -112,8 +115,5 @@ public class Vehiculo {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-    
-    
-    
+    }  
 }
