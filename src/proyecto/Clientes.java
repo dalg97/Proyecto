@@ -1,5 +1,7 @@
 package proyecto;
 
+import java.util.Date;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -12,7 +14,7 @@ package proyecto;
 public class Clientes extends javax.swing.JFrame {
 
     /**
-     * Creates new form Clientes
+     * Creates new form 
      */
     public Clientes() {
         initComponents();
@@ -41,6 +43,7 @@ public class Clientes extends javax.swing.JFrame {
         Plata = new javax.swing.JCheckBox();
         Bronce = new javax.swing.JCheckBox();
         Zafiro = new javax.swing.JCheckBox();
+        RegistrarCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +66,11 @@ public class Clientes extends javax.swing.JFrame {
         jLabel6.setText("Categoria");
 
         Oro.setText("Oro");
+        Oro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OroActionPerformed(evt);
+            }
+        });
 
         Plata.setText("Plata");
         Plata.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +80,11 @@ public class Clientes extends javax.swing.JFrame {
         });
 
         Bronce.setText("Bronce");
+        Bronce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BronceActionPerformed(evt);
+            }
+        });
 
         Zafiro.setText("Zafiro");
         Zafiro.addActionListener(new java.awt.event.ActionListener() {
@@ -80,35 +93,51 @@ public class Clientes extends javax.swing.JFrame {
             }
         });
 
+        RegistrarCliente.setText("Registrar");
+        RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarClienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(CorreoCliente))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(FechaCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                                    .addComponent(CedulaCliente, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(NombreCliente, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(427, 427, 427))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Oro)
                             .addComponent(jLabel6)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3))
-                                .addGap(38, 38, 38)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(NombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(FechaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CorreoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(Plata)
                             .addComponent(Bronce)
-                            .addComponent(Zafiro)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(249, 249, 249)
-                        .addComponent(jLabel1)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Zafiro)
+                                .addGap(242, 242, 242)
+                                .addComponent(RegistrarCliente)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(249, 249, 249)
+                .addComponent(jLabel1)
                 .addGap(373, 373, 373))
         );
         layout.setVerticalGroup(
@@ -120,46 +149,87 @@ public class Clientes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(NombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(FechaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(CorreoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel6)
-                        .addGap(35, 35, 35)
-                        .addComponent(Oro)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Plata)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Bronce)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Zafiro))
-                    .addComponent(CedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(FechaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(CorreoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(48, 48, 48)
+                                .addComponent(jLabel6)
+                                .addGap(35, 35, 35)
+                                .addComponent(Oro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Plata)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Bronce)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Zafiro))
+                            .addComponent(CedulaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(44, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RegistrarCliente)
+                        .addGap(27, 27, 27))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    Pila mipila = new Pila();
     private void NombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreClienteActionPerformed
 
     private void PlataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlataActionPerformed
-        // TODO add your handling code here:
+        Plata.setSelected(true);
     }//GEN-LAST:event_PlataActionPerformed
 
     private void ZafiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZafiroActionPerformed
-        // TODO add your handling code here:
+        Zafiro.setSelected(true);
     }//GEN-LAST:event_ZafiroActionPerformed
+
+    private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
+        String Nombre = NombreCliente.getName();
+        int Cedula = Integer.parseInt(CedulaCliente.getName());
+        String Fecha = FechaCliente.getName();
+        String Correo = CorreoCliente.getName();
+        
+        if(Oro.isSelected()){
+            String Categoria = "Oro";
+            System.out.println(Categoria+Cedula+Nombre+Fecha+Correo);
+            mipila.push(new Cliente(Cedula,Nombre,Fecha,
+                Correo,Categoria));
+        }else if(Zafiro.isSelected()){
+            String Categoria = "Zafiro";
+            mipila.push(new Cliente(Cedula,Nombre,Fecha,
+                Correo,Categoria));
+        }else if(Plata.isSelected()){
+            String Categoria = "Plata";
+            mipila.push(new Cliente(Cedula,Nombre,Fecha,
+                Correo,Categoria));
+        }else{
+            String Categoria = "Bronce";
+            mipila.push(new Cliente(Cedula,Nombre,Fecha,
+                Correo,Categoria));
+        }
+        
+    }//GEN-LAST:event_RegistrarClienteActionPerformed
+
+    private void OroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OroActionPerformed
+        Oro.setSelected(true);
+    }//GEN-LAST:event_OroActionPerformed
+
+    private void BronceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BronceActionPerformed
+        Bronce.setSelected(true);
+    }//GEN-LAST:event_BronceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,19 +267,20 @@ public class Clientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox Bronce;
-    private javax.swing.JTextField CedulaCliente;
-    private javax.swing.JTextField CorreoCliente;
-    private javax.swing.JTextField FechaCliente;
-    private javax.swing.JTextField NombreCliente;
-    private javax.swing.JCheckBox Oro;
-    private javax.swing.JCheckBox Plata;
-    private javax.swing.JCheckBox Zafiro;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    protected static javax.swing.JCheckBox Bronce;
+    protected static javax.swing.JTextField CedulaCliente;
+    protected static javax.swing.JTextField CorreoCliente;
+    protected static javax.swing.JTextField FechaCliente;
+    protected static javax.swing.JTextField NombreCliente;
+    protected static javax.swing.JCheckBox Oro;
+    protected static javax.swing.JCheckBox Plata;
+    protected static javax.swing.JButton RegistrarCliente;
+    protected static javax.swing.JCheckBox Zafiro;
+    protected static javax.swing.JLabel jLabel1;
+    protected static javax.swing.JLabel jLabel2;
+    protected static javax.swing.JLabel jLabel3;
+    protected static javax.swing.JLabel jLabel4;
+    protected static javax.swing.JLabel jLabel5;
+    protected static javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

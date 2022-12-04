@@ -99,9 +99,19 @@ public class Principal extends javax.swing.JFrame {
         MenuVehiculos.setText("Vehiculos");
 
         RegistrarVehiculo.setText("Registrar");
+        RegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarVehiculoActionPerformed(evt);
+            }
+        });
         MenuVehiculos.add(RegistrarVehiculo);
 
         ModificarVehiculo.setText("Modificar");
+        ModificarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarVehiculoActionPerformed(evt);
+            }
+        });
         MenuVehiculos.add(ModificarVehiculo);
 
         EliminarVehiculo.setText("Eliminar");
@@ -165,11 +175,15 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-        // TODO add your handling code here:
+        Clientes client = new Clientes();
+        client.setVisible(true);
+        client.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_RegistrarClienteActionPerformed
 
     private void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarClienteActionPerformed
-        // TODO add your handling code here:
+        Clientes client = new Clientes();
+        client.setVisible(true);
+        client.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_ModificarClienteActionPerformed
 
     private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
@@ -183,6 +197,18 @@ public class Principal extends javax.swing.JFrame {
     private void ConsultaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaSolicitudesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
+
+    private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed
+        VentanaVehiculos vehicle = new VentanaVehiculos();
+        vehicle.setVisible(true);
+        vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_RegistrarVehiculoActionPerformed
+
+    private void ModificarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarVehiculoActionPerformed
+       VentanaVehiculos vehicle = new VentanaVehiculos();
+        vehicle.setVisible(true);
+        vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_ModificarVehiculoActionPerformed
 
     /**
      * @param args the command line arguments
