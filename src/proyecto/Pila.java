@@ -52,7 +52,7 @@ public class Pila {
             this.largo--;
         }
     }
-    
+    /*
     public boolean search(int reference) {
         // Crea una copia de la pila.
         Nodo1 aux = cima;
@@ -119,5 +119,5 @@ public class Pila {
         else{
             System.out.println("El nodo indicado no existe");
         }
-    }
+    }*/
 }
