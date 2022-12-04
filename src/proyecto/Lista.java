@@ -72,4 +72,48 @@ public class Lista {
             }
         }
     }
+    
+    public void eliminar(String placa) { //definimos el metodo llamado elimina y 
+        //ponemos como parametro el int id 
+        //Lo que vamos a hacer es eliminar el id de una persona
+       if (cabeza != null) {//Si la lista no esta nula entonces empieza a buscar
+            if (cabeza.getVehiculo().getPlaca() == placa) {
+            //buscamos el id utilizando un 
+           //if statement y verificamos que la cabeza cumpla el parametro del id
+                cabeza = cabeza.getNext(); //sino cumple como parametro, 
+                //seguimos buscando y definimos el siguiente nodo como cabeza
+            } else {
+                Nodo2 aux = cabeza; //se utiliza el modo auxiliar 
+                //Mientras el nodo no este vacío 
+                //de la lista sea menor que el buscado
+                while (aux.getNext() != null
+                        && aux.getNext().getVehiculo().getPlaca() != placa) {
+                    aux = aux.getNext();
+                }
+                //avanzo en la lista
+
+                // si el que le sigue es mayor entonces para el ciclo 
+                //y se ejecuta lo siguiente
+                if (aux.getNext() != null
+                        && aux.getNext().getVehiculo().getPlaca() == placa) {
+                    //si el id es igual al del parametro...
+
+                    aux.setNext(aux.getNext().getNext());
+                    aux.getNext().getNext().setAtras(aux);
+                   //y en este ultimo paso lo que hacemos es cambiar referencias
+                }
+            }
+        }
+    }
+    
+    @Override
+    public String toString() {
+        Nodo2 aux = cabeza;
+        String s = "";
+        while (aux != null) {
+            s += aux + ", ";
+            aux = aux.getNext();
+        }
+        return s;
+    }
 }

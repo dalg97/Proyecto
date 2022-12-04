@@ -64,4 +64,9 @@ public class Cliente {
         return Categoria;
     }
     
+    @Override
+    public String toString(){
+        return "Cliente{" + "Nombre="+Nombre+", Cedula="+Cedula+
+                ", Categoria="+Categoria+'}';
+    }
 }
