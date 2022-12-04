@@ -11,6 +11,7 @@ package proyecto;
 public class Nodo2 {
     //Atributos del Nodo
     private Vehiculo vehiculo;
+    private Nodo2 next;
     private Nodo2 atras;
     
     //Setters and Getters
@@ -18,6 +19,14 @@ public class Nodo2 {
         return vehiculo;
     }
 
+    public Nodo2 getNext() {
+        return next;
+    }
+
+    public void setNext(Nodo2 next) {
+        this.next = next;
+    }
+    
     public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
     }
