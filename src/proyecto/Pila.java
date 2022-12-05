@@ -17,8 +17,7 @@ public class Pila {
     public boolean Vacia(){ return cima == null;}
     
     public void push(Cliente cliente){
-        Nodo1 newNode = new Nodo1(cliente);
-                
+        Nodo1 newNode = new Nodo1(cliente);    
         if (this.Vacia()){
             this.cima = newNode;
         }
@@ -29,7 +28,7 @@ public class Pila {
         this.largo++;
     }
     
-    public void mostrar(int cedula){
+    public void mostrarEspecifico(int cedula){
         // Crea una copia de la pila.
         Nodo1 aux = cima;
         String output="";
@@ -44,6 +43,22 @@ public class Pila {
         }
         JOptionPane.showMessageDialog(null,output);
     }
+    
+    public void mostrarTotal(){
+        // Crea una copia de la pila.
+        Nodo1 aux = cima;
+        String output="";
+        // Recorre la pila hasta el ultimo node.
+        while(aux != null){
+            
+            output += "| Nombre: "+aux.getCliente().getNombre()+" | "
+                    + "Cedula: "+aux.getCliente().getCedula();
+            System.out.println(output);
+            aux = aux.getSiguiente(); 
+        }
+        JOptionPane.showMessageDialog(null,output);
+    }
+    
     public void pop(){
         if (!Vacia()) {
             // Asigna como primer node al siguiente de la pila.

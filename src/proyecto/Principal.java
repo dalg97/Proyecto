@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -173,7 +175,7 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    Pila mipila;
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
         Clientes client = new Clientes();
         client.setVisible(true);
@@ -191,7 +193,17 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_EliminarClienteActionPerformed
 
     private void ConsultaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaClientesActionPerformed
-        // TODO add your handling code here:
+        int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    null, "  Consulta de Clientes\n"
+                    + "1. Cliente especifico \n"
+                    + "2. Clientes Registrados \n"));
+        if(opcion == 1){
+            int cedula = Integer.parseInt(JOptionPane.showInputDialog(
+                    null, "Ingrese numero de cedula: "));
+            mipila.mostrarEspecifico(cedula);
+        }else{
+            mipila.mostrarTotal();
+        }
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 
     private void ConsultaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaSolicitudesActionPerformed

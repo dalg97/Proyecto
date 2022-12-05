@@ -31,6 +31,5 @@ public class Nodo1 {
     public void setSiguiente(Nodo1 siguiente) {
         this.siguiente = siguiente;
     }
-    
-    
+
 }

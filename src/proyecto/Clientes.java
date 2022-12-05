@@ -1,6 +1,7 @@
 package proyecto;
 
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -197,14 +198,15 @@ public class Clientes extends javax.swing.JFrame {
     }//GEN-LAST:event_ZafiroActionPerformed
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-        String Nombre = NombreCliente.getName();
-        int Cedula = Integer.parseInt(CedulaCliente.getName());
-        String Fecha = FechaCliente.getName();
-        String Correo = CorreoCliente.getName();
-        
+       // System.out.println("Working");
+        String Nombre = NombreCliente.getText();
+        int Cedula = Integer.parseInt(CedulaCliente.getText());
+        String Fecha = FechaCliente.getText();
+        String Correo = CorreoCliente.getText();
+        //System.out.println(Nombre+Cedula+Fecha+Correo);
         if(Oro.isSelected()){
             String Categoria = "Oro";
-            System.out.println(Categoria+Cedula+Nombre+Fecha+Correo);
+            //System.out.println(Categoria+Cedula+Nombre+Fecha+Correo);
             mipila.push(new Cliente(Cedula,Nombre,Fecha,
                 Correo,Categoria));
         }else if(Zafiro.isSelected()){
@@ -220,7 +222,10 @@ public class Clientes extends javax.swing.JFrame {
             mipila.push(new Cliente(Cedula,Nombre,Fecha,
                 Correo,Categoria));
         }
-        
+        JOptionPane.showMessageDialog(null,"Cliente fue "
+                + "Registrado exitosamente");
+        limpiarClientes();
+        mipila.mostrarEspecifico(116910303);
     }//GEN-LAST:event_RegistrarClienteActionPerformed
 
     private void OroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OroActionPerformed
@@ -230,7 +235,18 @@ public class Clientes extends javax.swing.JFrame {
     private void BronceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BronceActionPerformed
         Bronce.setSelected(true);
     }//GEN-LAST:event_BronceActionPerformed
-
+    
+    private void limpiarClientes(){
+        //Limpiar todos los campos
+        NombreCliente.setText("");
+        CedulaCliente.setText("");
+        FechaCliente.setText("");
+        CorreoCliente.setText("");
+        Oro.setSelected(false);
+        Zafiro.setSelected(false);
+        Plata.setSelected(false);
+        Bronce.setSelected(false);
+    }
     /**
      * @param args the command line arguments
      */
