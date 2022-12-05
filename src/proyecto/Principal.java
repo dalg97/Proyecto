@@ -184,7 +184,6 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_RegistrarClienteActionPerformed
 
     private void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarClienteActionPerformed
-        Clientes client = new Clientes();
         client.setVisible(true);
         client.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_ModificarClienteActionPerformed
