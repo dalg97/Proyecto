@@ -175,9 +175,10 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    Pila mipila;
+    //Pila mipila;
+    Clientes client = new Clientes();
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-        Clientes client = new Clientes();
+        //Clientes client = new Clientes();
         client.setVisible(true);
         client.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_RegistrarClienteActionPerformed
@@ -189,7 +190,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_ModificarClienteActionPerformed
 
     private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
-        // TODO add your handling code here:
+        int cedula = Integer.parseInt(JOptionPane.showInputDialog(
+                    null, "Ingrese numero de cedula: "));
     }//GEN-LAST:event_EliminarClienteActionPerformed
 
     private void ConsultaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaClientesActionPerformed
@@ -200,9 +202,9 @@ public class Principal extends javax.swing.JFrame {
         if(opcion == 1){
             int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                     null, "Ingrese numero de cedula: "));
-            mipila.mostrarEspecifico(cedula);
+            client.mipila.mostrarEspecifico(cedula);
         }else{
-            mipila.mostrarTotal();
+            client.mipila.mostrarTotal();
         }
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 

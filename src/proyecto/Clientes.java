@@ -184,7 +184,7 @@ public class Clientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    Pila mipila = new Pila();
+     Pila mipila = new Pila();
     private void NombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NombreClienteActionPerformed
@@ -198,7 +198,7 @@ public class Clientes extends javax.swing.JFrame {
     }//GEN-LAST:event_ZafiroActionPerformed
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-       // System.out.println("Working");
+       //Agregar la informacion del cliente a la pila
         String Nombre = NombreCliente.getText();
         int Cedula = Integer.parseInt(CedulaCliente.getText());
         String Fecha = FechaCliente.getText();
@@ -206,26 +206,28 @@ public class Clientes extends javax.swing.JFrame {
         //System.out.println(Nombre+Cedula+Fecha+Correo);
         if(Oro.isSelected()){
             String Categoria = "Oro";
-            //System.out.println(Categoria+Cedula+Nombre+Fecha+Correo);
+            //Crear la pila con Categoria Oro
             mipila.push(new Cliente(Cedula,Nombre,Fecha,
                 Correo,Categoria));
         }else if(Zafiro.isSelected()){
+            //Crear la pila con Categoria Zafiro
             String Categoria = "Zafiro";
             mipila.push(new Cliente(Cedula,Nombre,Fecha,
                 Correo,Categoria));
         }else if(Plata.isSelected()){
+            //Crear la pila con Categoria Plata
             String Categoria = "Plata";
             mipila.push(new Cliente(Cedula,Nombre,Fecha,
                 Correo,Categoria));
         }else{
+            //Crear la pila con Categoria Bronce
             String Categoria = "Bronce";
             mipila.push(new Cliente(Cedula,Nombre,Fecha,
                 Correo,Categoria));
         }
         JOptionPane.showMessageDialog(null,"Cliente fue "
                 + "Registrado exitosamente");
-        limpiarClientes();
-        mipila.mostrarEspecifico(116910303);
+        limpiarClientes();//Limpiar los campos
     }//GEN-LAST:event_RegistrarClienteActionPerformed
 
     private void OroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OroActionPerformed

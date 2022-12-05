@@ -50,7 +50,6 @@ public class Pila {
         String output="";
         // Recorre la pila hasta el ultimo node.
         while(aux != null){
-            
             output += "| Nombre: "+aux.getCliente().getNombre()+" | "
                     + "Cedula: "+aux.getCliente().getCedula();
             System.out.println(output);
