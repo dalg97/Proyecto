@@ -191,6 +191,7 @@ public class Principal extends javax.swing.JFrame {
     private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
         int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                     null, "Ingrese numero de cedula: "));
+        client.mipila.popModificado1(cedula);
     }//GEN-LAST:event_EliminarClienteActionPerformed
 
     private void ConsultaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaClientesActionPerformed
