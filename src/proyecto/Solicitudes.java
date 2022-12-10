@@ -1,6 +1,7 @@
 
 package proyecto;
 
+import javax.swing.JOptionPane;
 import static proyecto.Clientes.CedulaCliente;
 import static proyecto.Clientes.CorreoCliente;
 import static proyecto.Clientes.FechaCliente;
@@ -233,6 +234,8 @@ public class Solicitudes extends javax.swing.JFrame {
                Estado,Pasajeros,Marca,Modelo,
                Extras));
        }
+       JOptionPane.showMessageDialog(null,"Solicitud "
+                + "registrada exitosamente");
        limpiarSolicitudes();
     }//GEN-LAST:event_CrearSolicitudActionPerformed
 

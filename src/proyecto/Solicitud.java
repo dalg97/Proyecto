@@ -94,11 +94,4 @@ public class Solicitud {
     public void setExtras(String extras) {
         this.extras = extras;
     } 
-    @Override
-    public String toString() {
-        return "Solicitud: \n"+"Cedula: "+this.cedula+"\nFecha: "+this.fecha+
-                "\nDias: "+this.dias+"\nEstado: "+this.estado+"\nPasajeros: "+
-                this.pasajeros+"\nMarca: "+this.marca+"\nModelo: "+this.modelo+
-                "\nExtras: "+this.extras;
-    }
 }

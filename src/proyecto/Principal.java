@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package proyecto;
 
 import javax.swing.JOptionPane;
@@ -215,7 +211,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 
     private void ConsultaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaSolicitudesActionPerformed
-        solicitud.micola.toString();
+        JOptionPane.showMessageDialog(null,
+                solicitud.micola.toString());
     }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
 
     private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed

@@ -33,5 +33,14 @@ public class Nodo3 {
 
     public void setAtras(Nodo3 atras) {
         this.atras = atras;
-    }    
+    } 
+    @Override
+    public String toString() {
+        return "Solicitud: \n"+"Cedula: "+solicitud.getCedula()+
+                "\nFecha: "+solicitud.getFecha()+"\nDias: "+solicitud.getDias()+
+                "\nEstado: "+solicitud.getEstado()+"\nPasajeros: "+
+                solicitud.getPasajeros()+"\nMarca: "+solicitud.getMarca()+
+                "\nModelo: "+solicitud.getModelo()+"\nExtras: "+
+                solicitud.getExtras();
+    }
 }
