@@ -213,7 +213,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
 
     private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed
-        VentanaVehiculos vehicle = new VentanaVehiculos();
+        RegistrarVehiculo vehicle = new RegistrarVehiculo();
         vehicle.setVisible(true);
         vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_RegistrarVehiculoActionPerformed
