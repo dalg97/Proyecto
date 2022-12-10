@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package proyecto;
 
 /**
@@ -97,4 +94,11 @@ public class Solicitud {
     public void setExtras(String extras) {
         this.extras = extras;
     } 
+    @Override
+    public String toString() {
+        return "Solicitud: \n"+"Cedula: "+this.cedula+"\nFecha: "+this.fecha+
+                "\nDias: "+this.dias+"\nEstado: "+this.estado+"\nPasajeros: "+
+                this.pasajeros+"\nMarca: "+this.marca+"\nModelo: "+this.modelo+
+                "\nExtras: "+this.extras;
+    }
 }

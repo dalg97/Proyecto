@@ -11,8 +11,7 @@ package proyecto;
 public class Nodo3 {
     //Atributos del node3
     private Solicitud solicitud;
-    private Nodo3 next;
-    private Nodo3 back;
+    private Nodo3 atras;
     
     //Constructor
     public Nodo3(Solicitud solicitud){
@@ -28,19 +27,11 @@ public class Nodo3 {
         this.solicitud = solicitud;
     }
 
-    public Nodo3 getNext() {
-        return next;
+    public Nodo3 getAtras() {
+        return atras;
     }
 
-    public void setNext(Nodo3 next) {
-        this.next = next;
-    }
-
-    public Nodo3 getBack() {
-        return back;
-    }
-
-    public void setBack(Nodo3 back) {
-        this.back = back;
-    } 
+    public void setAtras(Nodo3 atras) {
+        this.atras = atras;
+    }    
 }

@@ -124,6 +124,11 @@ public class Principal extends javax.swing.JFrame {
         MenuAlquiler.setText("Alquiler");
 
         SolicitarAlquiler.setText("Solicitar Alquiler");
+        SolicitarAlquiler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SolicitarAlquilerActionPerformed(evt);
+            }
+        });
         MenuAlquiler.add(SolicitarAlquiler);
 
         DevolucionVehiculo.setText("Devolucion");
@@ -177,6 +182,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     //Pila mipila;
     Clientes client = new Clientes();
+    Solicitudes solicitud = new Solicitudes();
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
         //Clientes client = new Clientes();
         client.setVisible(true);
@@ -209,7 +215,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 
     private void ConsultaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaSolicitudesActionPerformed
-        // TODO add your handling code here:
+        //solicitud.micola.
     }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
 
     private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed
@@ -223,6 +229,12 @@ public class Principal extends javax.swing.JFrame {
         vehicle.setVisible(true);
         vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_ModificarVehiculoActionPerformed
+
+    private void SolicitarAlquilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SolicitarAlquilerActionPerformed
+        //Solicitudes solicitud = new Solicitudes();
+        solicitud.setVisible(true);
+        solicitud.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_SolicitarAlquilerActionPerformed
 
     /**
      * @param args the command line arguments
