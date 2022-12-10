@@ -15,7 +15,7 @@ public class Cola {
     public Cola() {
     }
     
-    public void encola(Solicitud solicitud){
+    public void encola(Solicitud solicitud,String categoria){
         Nodo3 newnode = new Nodo3(solicitud); 
         if(frente == null){  // significa que la cola esta vacia
             frente = newnode;
@@ -44,5 +44,8 @@ public class Cola {
             aux=aux.getAtras();
         }
         return s;
+    }
+    public void asignar(){
+        
     }
 }

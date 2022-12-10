@@ -44,6 +44,21 @@ public class Pila {
         JOptionPane.showMessageDialog(null,output);
     }
     
+    public String mostrarCategoria(int cedula){
+        // Crea una copia de la pila.
+        Nodo1 aux = cima;
+       String categoria="";
+        // Recorre la pila hasta el ultimo node.
+        while(aux != null){
+            if(cedula == aux.getCliente().getCedula()){
+                categoria = aux.getCliente().getCategoria();
+                aux = null;
+            }else{
+            aux = aux.getSiguiente(); }
+        }
+        return categoria;
+    }
+    
     public void mostrarTotal(){
         // Crea una copia de la pila.
         Nodo1 aux = cima;
