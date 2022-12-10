@@ -215,7 +215,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 
     private void ConsultaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaSolicitudesActionPerformed
-        //solicitud.micola.
+        solicitud.micola.toString();
     }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
 
     private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed
