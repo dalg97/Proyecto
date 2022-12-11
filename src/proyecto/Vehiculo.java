@@ -7,11 +7,14 @@ package proyecto;
 /**
  *
  * @author diego
+ * @author danny
  */
 public class Vehiculo {
+
     //Atributos del Vehiculo
     private String placa;
     private String marca;
+    private String modelo;
     private int anio;
     private String color;
     private int cilidrada;
@@ -20,22 +23,24 @@ public class Vehiculo {
     private int precio;
     private String extras;
     private String estado;
-    
+
     //Constructor
-    public Vehiculo(String placa,String marca,int anio,String color,
-            int cilindrada,String combustible,int pasajeros,int precio,
-            String extras,String estado){
-            this.placa = placa;
-            this.marca = marca;
-            this.anio = anio;
-            this.color = color;
-            this.cilidrada = cilindrada;
-            this.combustible = combustible;
-            this.pasajeros = pasajeros;
-            this.precio = precio;
-            this.extras = extras;
-            this.estado = estado;
+    public Vehiculo(String placa, String marca, String modelo, int anio,
+            String color, int cilindrada, String combustible, int pasajeros,
+            int precio, String extras, String estado) {
+        this.placa = placa;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+        this.color = color;
+        this.cilidrada = cilindrada;
+        this.combustible = combustible;
+        this.pasajeros = pasajeros;
+        this.precio = precio;
+        this.extras = extras;
+        this.estado = estado;
     }
+
     //Setters and Getters
     public String getPlaca() {
         return placa;
@@ -51,6 +56,14 @@ public class Vehiculo {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public int getAnio() {
@@ -115,10 +128,11 @@ public class Vehiculo {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }  
-    
-     @Override
-    public String toString(){
-        return "Vehiculo{" + "Placa="+placa+", Anio="+anio+", Marca="+marca+'}';
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" + "Placa=" + placa + ", Anio=" + anio
+                + ", Marca=" + marca + '}';
     }
 }
