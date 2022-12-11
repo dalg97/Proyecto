@@ -28,21 +28,21 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         Limpiar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        BT_Guardar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        ExtraArranque = new javax.swing.JCheckBox();
+        ExtraCargador = new javax.swing.JCheckBox();
+        ExtraGPS = new javax.swing.JCheckBox();
+        ExtraSenReversa = new javax.swing.JCheckBox();
+        PlacaVehiculo = new javax.swing.JTextField();
+        MarcaVehiculo = new javax.swing.JTextField();
+        ModeloVehiculo = new javax.swing.JTextField();
+        AñoVehiculo = new javax.swing.JTextField();
+        ColorVehiculo = new javax.swing.JTextField();
+        CCVehiculo = new javax.swing.JTextField();
+        CombustibleVehiculo = new javax.swing.JTextField();
+        CantPasajerosVehiculo = new javax.swing.JTextField();
+        PrecioAlquilerVehiculo = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -80,8 +80,13 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         });
         jPanel1.add(Limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, -1, -1));
 
-        jButton2.setText("Guardar");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, -1));
+        BT_Guardar.setText("Guardar");
+        BT_Guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BT_GuardarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BT_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, -1));
 
         jButton3.setText("Salir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -91,58 +96,63 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, -1, -1));
 
-        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox1.setText("Arranque sin llave");
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, -1, -1));
-
-        jCheckBox2.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox2.setText("Cargador Inalambrico");
-        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, -1, -1));
-
-        jCheckBox3.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox3.setText("GPS - Navegador en Tiempo Real");
-        jPanel1.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, -1, -1));
-
-        jCheckBox4.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox4.setText("Sensores + Camara Reversa");
-        jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
-
-        jTextField1.setText("PQR011");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        ExtraArranque.setForeground(new java.awt.Color(0, 0, 0));
+        ExtraArranque.setText("Arranque sin llave");
+        ExtraArranque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ExtraArranqueActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 60, -1));
+        jPanel1.add(ExtraArranque, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, -1, -1));
 
-        jTextField2.setText("Volkswagen");
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 90, -1));
+        ExtraCargador.setForeground(new java.awt.Color(0, 0, 0));
+        ExtraCargador.setText("Cargador Inalambrico");
+        jPanel1.add(ExtraCargador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, -1, -1));
 
-        jTextField3.setText("Jetta");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 90, -1));
+        ExtraGPS.setForeground(new java.awt.Color(0, 0, 0));
+        ExtraGPS.setText("GPS - Navegador en Tiempo Real");
+        jPanel1.add(ExtraGPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, -1, -1));
 
-        jTextField4.setText("1997");
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 60, -1));
+        ExtraSenReversa.setForeground(new java.awt.Color(0, 0, 0));
+        ExtraSenReversa.setText("Sensores + Camara Reversa");
+        jPanel1.add(ExtraSenReversa, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
 
-        jTextField5.setText("Negro");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        PlacaVehiculo.setText("PQR011");
+        PlacaVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                PlacaVehiculoActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
+        jPanel1.add(PlacaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 60, -1));
 
-        jTextField6.setText("2000");
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+        MarcaVehiculo.setText("Volkswagen");
+        jPanel1.add(MarcaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 90, -1));
 
-        jTextField7.setText("Gasolina");
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
+        ModeloVehiculo.setText("Jetta");
+        jPanel1.add(ModeloVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 90, -1));
 
-        jTextField8.setText("5");
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
+        AñoVehiculo.setText("1997");
+        jPanel1.add(AñoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 60, -1));
 
-        jTextField9.setText("45000");
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, -1, -1));
+        ColorVehiculo.setText("Negro");
+        ColorVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ColorVehiculoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ColorVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
+
+        CCVehiculo.setText("2000");
+        jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+
+        CombustibleVehiculo.setText("Gasolina");
+        jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
+
+        CantPasajerosVehiculo.setText("5");
+        jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
+
+        PrecioAlquilerVehiculo.setText("45000");
+        jPanel1.add(PrecioAlquilerVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, -1, -1));
 
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Extras:");
@@ -273,15 +283,15 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-        
+
     }//GEN-LAST:event_RegistrarClienteActionPerformed
 
     private void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarClienteActionPerformed
-        
+
     }//GEN-LAST:event_ModificarClienteActionPerformed
 
     private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
-        
+
     }//GEN-LAST:event_EliminarClienteActionPerformed
 
     private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed
@@ -296,25 +306,25 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_ModificarVehiculoActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void PlacaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlacaVehiculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_PlacaVehiculoActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void ColorVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ColorVehiculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_ColorVehiculoActionPerformed
 
     private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText(null);
-        jTextField2.setText(null);
-        jTextField3.setText(null);
-        jTextField4.setText(null);
-        jTextField5.setText(null);
-        jTextField6.setText(null);
-        jTextField7.setText(null);
-        jTextField8.setText(null);
-        jTextField9.setText(null);       
+        PlacaVehiculo.setText(null);
+        MarcaVehiculo.setText(null);
+        ModeloVehiculo.setText(null);
+        AñoVehiculo.setText(null);
+        ColorVehiculo.setText(null);
+        CCVehiculo.setText(null);
+        CombustibleVehiculo.setText(null);
+        CantPasajerosVehiculo.setText(null);
+        PrecioAlquilerVehiculo.setText(null);
     }//GEN-LAST:event_LimpiarActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -322,10 +332,33 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+
+    private void BT_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_GuardarActionPerformed
+        // TODO add your handling code here:
+        //Guardar el Vehiculo a la Lista
+        String Placa = PlacaVehiculo.getText();
+        String marca = MarcaVehiculo.getText();
+        String modelo = ModeloVehiculo.getText();
+        int anio = Integer.parseInt(AñoVehiculo.getText());
+        String Color = ColorVehiculo.getText();
+        int cilidrada = Integer.parseInt(CCVehiculo.getText());
+        String combustible = CombustibleVehiculo.getText();
+        int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
+        int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
+
+ 
+
+
+    }//GEN-LAST:event_BT_GuardarActionPerformed
+
+    private void ExtraArranqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExtraArranqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExtraArranqueActionPerformed
+
+/**
+ * @param args the command line arguments
+ */
+public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -336,16 +369,28 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                }
+
+}
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -358,24 +403,33 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AñoVehiculo;
+    private javax.swing.JButton BT_Guardar;
+    private javax.swing.JTextField CCVehiculo;
+    private javax.swing.JTextField CantPasajerosVehiculo;
+    private javax.swing.JTextField ColorVehiculo;
+    private javax.swing.JTextField CombustibleVehiculo;
     private javax.swing.JMenuItem DevolucionVehiculo;
     private javax.swing.JMenuItem EliminarCliente;
     private javax.swing.JMenuItem EliminarVehiculo;
+    private javax.swing.JCheckBox ExtraArranque;
+    private javax.swing.JCheckBox ExtraCargador;
+    private javax.swing.JCheckBox ExtraGPS;
+    private javax.swing.JCheckBox ExtraSenReversa;
     private javax.swing.JButton Limpiar;
+    private javax.swing.JTextField MarcaVehiculo;
     private javax.swing.JMenu MenuAlquiler;
     private javax.swing.JMenu MenuClientes;
     private javax.swing.JMenu MenuVehiculos;
+    private javax.swing.JTextField ModeloVehiculo;
     private javax.swing.JMenuItem ModificarCliente;
     private javax.swing.JMenuItem ModificarVehiculo;
+    private javax.swing.JTextField PlacaVehiculo;
+    private javax.swing.JTextField PrecioAlquilerVehiculo;
     private javax.swing.JMenuItem RegistrarCliente;
     private javax.swing.JMenuItem RegistrarVehiculo;
     private javax.swing.JMenuItem SolicitarAlquiler;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -390,14 +444,5 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
