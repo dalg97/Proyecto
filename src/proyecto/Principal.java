@@ -1,5 +1,6 @@
 package proyecto;
 
+import static java.time.InstantSource.system;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,6 +31,8 @@ public class Principal extends javax.swing.JFrame {
         Analisis = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar9 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        Salir = new javax.swing.JMenuItem();
         MenuClientes = new javax.swing.JMenu();
         RegistrarCliente = new javax.swing.JMenuItem();
         ModificarCliente = new javax.swing.JMenuItem();
@@ -43,32 +46,46 @@ public class Principal extends javax.swing.JFrame {
         DevolucionVehiculo = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jButton1.setText("Catalogo de Vehiculos");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proyecto/Bundle"); // NOI18N
+        jButton1.setText(bundle.getString("Principal.jButton1.text")); // NOI18N
 
-        ConsultaClientes.setText("Consulta de Clientes");
+        ConsultaClientes.setText(bundle.getString("Principal.ConsultaClientes.text")); // NOI18N
         ConsultaClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConsultaClientesActionPerformed(evt);
             }
         });
 
-        ConsultaSolicitudes.setText("Consulta de Solicitudes");
+        ConsultaSolicitudes.setText(bundle.getString("Principal.ConsultaSolicitudes.text")); // NOI18N
         ConsultaSolicitudes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConsultaSolicitudesActionPerformed(evt);
             }
         });
 
-        Analisis.setText("Analisis");
+        Analisis.setText(bundle.getString("Principal.Analisis.text")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel1.setText("RentaCar ");
+        jLabel1.setText(bundle.getString("Principal.jLabel1.text")); // NOI18N
 
-        MenuClientes.setText("Clientes");
+        jMenu1.setText(bundle.getString("Principal.jMenu1.text")); // NOI18N
 
-        RegistrarCliente.setText("Registrar");
+        Salir.setText(bundle.getString("Principal.Salir.text")); // NOI18N
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Salir);
+
+        jMenuBar9.add(jMenu1);
+
+        MenuClientes.setText(bundle.getString("Principal.MenuClientes.text")); // NOI18N
+
+        RegistrarCliente.setText(bundle.getString("Principal.RegistrarCliente.text")); // NOI18N
         RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarClienteActionPerformed(evt);
@@ -76,7 +93,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuClientes.add(RegistrarCliente);
 
-        ModificarCliente.setText("Modificar");
+        ModificarCliente.setText(bundle.getString("Principal.ModificarCliente.text")); // NOI18N
         ModificarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarClienteActionPerformed(evt);
@@ -84,7 +101,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuClientes.add(ModificarCliente);
 
-        EliminarCliente.setText("Eliminar");
+        EliminarCliente.setText(bundle.getString("Principal.EliminarCliente.text")); // NOI18N
         EliminarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EliminarClienteActionPerformed(evt);
@@ -94,9 +111,9 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar9.add(MenuClientes);
 
-        MenuVehiculos.setText("Vehiculos");
+        MenuVehiculos.setText(bundle.getString("Principal.MenuVehiculos.text")); // NOI18N
 
-        RegistrarVehiculo.setText("Registrar");
+        RegistrarVehiculo.setText(bundle.getString("Principal.RegistrarVehiculo.text")); // NOI18N
         RegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarVehiculoActionPerformed(evt);
@@ -104,7 +121,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuVehiculos.add(RegistrarVehiculo);
 
-        ModificarVehiculo.setText("Modificar");
+        ModificarVehiculo.setText(bundle.getString("Principal.ModificarVehiculo.text")); // NOI18N
         ModificarVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarVehiculoActionPerformed(evt);
@@ -112,14 +129,14 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuVehiculos.add(ModificarVehiculo);
 
-        EliminarVehiculo.setText("Eliminar");
+        EliminarVehiculo.setText(bundle.getString("Principal.EliminarVehiculo.text")); // NOI18N
         MenuVehiculos.add(EliminarVehiculo);
 
         jMenuBar9.add(MenuVehiculos);
 
-        MenuAlquiler.setText("Alquiler");
+        MenuAlquiler.setText(bundle.getString("Principal.MenuAlquiler.text")); // NOI18N
 
-        SolicitarAlquiler.setText("Solicitar Alquiler");
+        SolicitarAlquiler.setText(bundle.getString("Principal.SolicitarAlquiler.text")); // NOI18N
         SolicitarAlquiler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SolicitarAlquilerActionPerformed(evt);
@@ -127,7 +144,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuAlquiler.add(SolicitarAlquiler);
 
-        DevolucionVehiculo.setText("Devolucion");
+        DevolucionVehiculo.setText(bundle.getString("Principal.DevolucionVehiculo.text")); // NOI18N
         MenuAlquiler.add(DevolucionVehiculo);
 
         jMenuBar9.add(MenuAlquiler);
@@ -169,12 +186,13 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(ConsultaSolicitudes)
                     .addComponent(ConsultaClientes)
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addComponent(Analisis)
                 .addGap(108, 108, 108))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     //Pila mipila;
     Clientes client = new Clientes();
@@ -192,20 +210,20 @@ public class Principal extends javax.swing.JFrame {
 
     private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
         int cedula = Integer.parseInt(JOptionPane.showInputDialog(
-                    null, "Ingrese numero de cedula: "));
+                null, "Ingrese numero de cedula: "));
         client.mipila.popModificado1(cedula);
     }//GEN-LAST:event_EliminarClienteActionPerformed
 
     private void ConsultaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaClientesActionPerformed
         int opcion = Integer.parseInt(JOptionPane.showInputDialog(
-                    null, "  Consulta de Clientes\n"
-                    + "1. Cliente especifico \n"
-                    + "2. Clientes Registrados \n"));
-        if(opcion == 1){
+                null, "  Consulta de Clientes\n"
+                + "1. Cliente especifico \n"
+                + "2. Clientes Registrados \n"));
+        if (opcion == 1) {
             int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                     null, "Ingrese numero de cedula: "));
             client.mipila.mostrarEspecifico(cedula);
-        }else{
+        } else {
             client.mipila.mostrarTotal();
         }
     }//GEN-LAST:event_ConsultaClientesActionPerformed
@@ -222,7 +240,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_RegistrarVehiculoActionPerformed
 
     private void ModificarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarVehiculoActionPerformed
-       VentanaVehiculos vehicle = new VentanaVehiculos();
+        VentanaVehiculos vehicle = new VentanaVehiculos();
         vehicle.setVisible(true);
         vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_ModificarVehiculoActionPerformed
@@ -232,6 +250,15 @@ public class Principal extends javax.swing.JFrame {
         solicitud.setVisible(true);
         solicitud.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_SolicitarAlquilerActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+        int answer = JOptionPane.showConfirmDialog(null,
+                "¿Está seguro de Salir?", " Salir ", JOptionPane.YES_NO_OPTION);
+        if (answer == 0) {
+            dispose();
+    }//GEN-LAST:event_SalirActionPerformed
+    }
 
     /**
      * @param args the command line arguments
@@ -282,9 +309,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem ModificarVehiculo;
     private javax.swing.JMenuItem RegistrarCliente;
     private javax.swing.JMenuItem RegistrarVehiculo;
+    private javax.swing.JMenuItem Salir;
     private javax.swing.JMenuItem SolicitarAlquiler;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar9;
     // End of variables declaration//GEN-END:variables
 }
