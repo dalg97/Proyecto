@@ -9,13 +9,13 @@ package proyecto;
  * @author diego
  */
 public class Cliente {
-    private int Cedula;
+    private Long Cedula;
     private String Nombre;
     private String Fecha;
     private String Correo;
     private String Categoria;
     
-    public Cliente(int cedula,String nombre,String fecha,String correo,String
+    public Cliente(Long cedula,String nombre,String fecha,String correo,String
             categoria){
         this.Cedula = cedula;
         this.Nombre = nombre;
@@ -24,7 +24,7 @@ public class Cliente {
         this.Categoria = categoria;
     }
 
-    public void setCedula(int Cedula) {
+    public void setCedula(Long Cedula) {
         this.Cedula = Cedula;
     }
 
@@ -44,7 +44,7 @@ public class Cliente {
         this.Categoria = Categoria;
     }
 
-    public int getCedula() {
+    public Long getCedula() {
         return Cedula;
     }
 

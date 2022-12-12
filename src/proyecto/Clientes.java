@@ -200,9 +200,11 @@ public class Clientes extends javax.swing.JFrame {
     }//GEN-LAST:event_ZafiroActionPerformed
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
-       //Agregar la informacion del cliente a la pila
+      
+           
+       
         String Nombre = NombreCliente.getText();
-        int Cedula = Integer.parseInt(CedulaCliente.getText());
+        Long Cedula = Long.parseLong(CedulaCliente.getText());
         String Fecha = FechaCliente.getText();
         String Correo = CorreoCliente.getText();
         //System.out.println(Nombre+Cedula+Fecha+Correo);
