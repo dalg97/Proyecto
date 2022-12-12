@@ -15,7 +15,7 @@ public class ModificarCliente extends javax.swing.JFrame {
      */
     public ModificarCliente() {
         initComponents();
-        
+        setTitle(" Modificar Cliente");
         setExtendedState(MAXIMIZED_BOTH);
         setResizable(false);
     }
