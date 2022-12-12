@@ -2,10 +2,7 @@
 package proyecto;
 
 import javax.swing.JOptionPane;
-import static proyecto.Clientes.CedulaCliente;
-import static proyecto.Clientes.CorreoCliente;
-import static proyecto.Clientes.FechaCliente;
-import static proyecto.Clientes.NombreCliente;
+
 
 /**
  *
@@ -27,6 +24,7 @@ public class Solicitudes extends javax.swing.JFrame {
      */
     Cola micola = new Cola();
     Clientes client = new Clientes();
+    //Principal principal = new Principal();
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -208,41 +206,43 @@ public class Solicitudes extends javax.swing.JFrame {
 
     private void CrearSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearSolicitudActionPerformed
        int Cedula = Integer.parseInt(CedulaSolicitud.getText());
+       System.out.println(Cedula);
        String Fecha = FechaSolicitud.getText();
        String Estado = EstadoSolicitud.getText();
        String Marca = MarcaSolicitud.getText();
        int Pasajeros = Integer.parseInt(PasajerosSolicitud.getText());
        int Dias = Integer.parseInt(DiasSolicitud.getText());
        String Modelo = ModeloSolicitud.getText();
-       
-       if(client.mipila.search(Cedula)){
+       System.out.println(client.mipila.search1(Cedula));
+       //if(client.mipila.search(Cedula)){
            String Categoria = client.mipila.mostrarCategoria(Cedula);
            if(SinLlave.isSelected()){
                 String Extras = "Arranque sin llave";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
-               Extras),Categoria);
+               Extras,Categoria));
             }else if(Cargador.isSelected()){
                 String Extras = "Cargador Inalambrico";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
-               Extras),Categoria);
+               Extras,Categoria));
             }else if(GPS.isSelected()){
                 String Extras = "GPS - Navegador en tiempo real";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
-               Extras),Categoria);
+               Extras,Categoria));
             }else{
                 String Extras = "Sensores + Camara reversa";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
-               Extras),Categoria);
+               Extras,Categoria));
             }
            JOptionPane.showMessageDialog(null,"Solicitud "
                 + "registrada exitosamente");
-        }else{
-           JOptionPane.showMessageDialog(null,"Usuario no existe");
-       }
+        //}else{
+         //  JOptionPane.showMessageDialog(null,
+        //           "Usuario no existe");
+       //}
        limpiarSolicitudes();
     }//GEN-LAST:event_CrearSolicitudActionPerformed
 
