@@ -16,10 +16,12 @@ public class Solicitud {
     private String marca;
     private String modelo;
     private String extras;
+    private String categoria;
     
     //Constructor
     public Solicitud(int cedula,String fecha,int dias,String estado,
-            int pasajeros,String marca,String modelo,String extras){
+            int pasajeros,String marca,String modelo,String extras,
+            String categoria){
         this.cedula = cedula;
         this.fecha = fecha;
         this.dias = dias;
@@ -28,6 +30,7 @@ public class Solicitud {
         this.marca = marca;
         this.modelo = modelo;
         this.extras = extras;
+        this.categoria= categoria;
     }
     
     //Setters and Getters
@@ -35,6 +38,14 @@ public class Solicitud {
         return cedula;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+    
     public void setCedula(int cedula) {
         this.cedula = cedula;
     }
