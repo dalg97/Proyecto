@@ -15,6 +15,8 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
      */
     public RegistrarVehiculo() {
         initComponents();
+        setTitle("Registrar Vehículo");
+       
     }
 
     /**
