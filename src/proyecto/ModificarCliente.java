@@ -35,8 +35,8 @@ public class ModificarCliente extends javax.swing.JFrame {
     }
     public boolean search(long Cedula) {
         boolean existe = false;
-        Clientes cliente = new Clientes();
-        for (Clientes c: Main.clientes) {
+        Cliente clientes = new Cliente();
+        for (Cliente c: Main.Clientes) {
             if (Clientes.getCedula() == Cedula) {
                 cliente = c;
                 existe = true;
@@ -93,7 +93,6 @@ public class ModificarCliente extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         ageField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        phoneField = new javax.swing.JTextField();
         searchField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         searchBtn1 = new javax.swing.JButton();
@@ -116,6 +115,11 @@ public class ModificarCliente extends javax.swing.JFrame {
         surnameField.setEditable(false);
 
         idField.setEditable(false);
+        idField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idFieldActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Edad:");
@@ -124,8 +128,6 @@ public class ModificarCliente extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Nombre:");
-
-        phoneField.setEditable(false);
 
         searchField.setToolTipText("Ingrese la identificacion");
         searchField.addActionListener(new java.awt.event.ActionListener() {
@@ -178,9 +180,7 @@ public class ModificarCliente extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jLabel4))
                         .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(phoneField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel5)
@@ -241,11 +241,9 @@ public class ModificarCliente extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(ageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(phoneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel8)
+                .addGap(78, 78, 78))
         );
 
         pack();
@@ -278,6 +276,10 @@ public class ModificarCliente extends javax.swing.JFrame {
     private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchFieldActionPerformed
+
+    private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,7 +326,6 @@ public class ModificarCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nameField;
-    private javax.swing.JTextField phoneField;
     private javax.swing.JButton save;
     private javax.swing.JButton save1;
     private javax.swing.JButton save2;
