@@ -50,6 +50,11 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proyecto/Bundle"); // NOI18N
         jButton1.setText(bundle.getString("Principal.jButton1.text")); // NOI18N
@@ -262,6 +267,13 @@ public class Principal extends javax.swing.JFrame {
         if (answer == 0) {
             dispose();
     }//GEN-LAST:event_SalirActionPerformed
+    }
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int answer = JOptionPane.showConfirmDialog(null,
+                "¿Está seguro de Salir?", " Salir ", JOptionPane.YES_NO_OPTION);
+        if (answer == 0) {
+            dispose();
+    }//GEN-LAST:event_formWindowClosing
     }
 
     /**
