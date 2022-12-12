@@ -41,6 +41,6 @@ public class Nodo3 {
                 "\nEstado: "+solicitud.getEstado()+"\nPasajeros: "+
                 solicitud.getPasajeros()+"\nMarca: "+solicitud.getMarca()+
                 "\nModelo: "+solicitud.getModelo()+"\nExtras: "+
-                solicitud.getExtras();
+                solicitud.getExtras()+"\nCat: "+solicitud.getCategoria();
     }
 }

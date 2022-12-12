@@ -180,7 +180,7 @@ public class Clientes extends javax.swing.JFrame {
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
         String Nombre = NombreCliente.getText();
-        Long Cedula = Long.parseLong(CedulaCliente.getText());
+        int Cedula = Integer.parseInt(CedulaCliente.getText());
         String Fecha = FechaCliente.getText();
         String Correo = CorreoCliente.getText();
         if(Oro.isSelected()){
