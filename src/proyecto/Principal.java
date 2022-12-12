@@ -14,6 +14,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        setTitle("RENT A CAR MAD");
     }
 
     /**
@@ -225,6 +226,7 @@ public class Principal extends javax.swing.JFrame {
             client.mipila.mostrarEspecifico(cedula);
         } else {
             client.mipila.mostrarTotal();
+            
         }
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 
