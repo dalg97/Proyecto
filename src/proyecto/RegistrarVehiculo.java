@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author danny
@@ -16,7 +18,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     public RegistrarVehiculo() {
         initComponents();
         setTitle("Registrar Vehículo");
-       
+
     }
 
     /**
@@ -329,6 +331,19 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         PrecioAlquilerVehiculo.setText(null);
     }//GEN-LAST:event_LimpiarActionPerformed
 
+    private void limpiarVehiculos() {
+        //Limpiar todos los campos
+        PlacaVehiculo.setText(null);
+        MarcaVehiculo.setText(null);
+        ModeloVehiculo.setText(null);
+        AñoVehiculo.setText(null);
+        ColorVehiculo.setText(null);
+        CCVehiculo.setText(null);
+        CombustibleVehiculo.setText(null);
+        CantPasajerosVehiculo.setText(null);
+        PrecioAlquilerVehiculo.setText(null);
+    }
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         System.exit(0);
@@ -348,7 +363,11 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
 
- 
+        {
+        }
+        JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
+                + "exitosamente");
+        limpiarVehiculos();
 
 
     }//GEN-LAST:event_BT_GuardarActionPerformed
@@ -357,10 +376,10 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ExtraArranqueActionPerformed
 
-/**
- * @param args the command line arguments
- */
-public static void main(String args[]) {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -372,27 +391,23 @@ public static void main(String args[]) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
-}
+                }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-} catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistrarVehiculo.class  
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(RegistrarVehiculo.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
