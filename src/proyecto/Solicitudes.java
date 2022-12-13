@@ -205,6 +205,7 @@ public class Solicitudes extends javax.swing.JFrame {
     }//GEN-LAST:event_FechaSolicitudActionPerformed
 
     private void CrearSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearSolicitudActionPerformed
+       //Clientes client = new Clientes();
        int Cedula = Integer.parseInt(CedulaSolicitud.getText());
        System.out.println(Cedula);
        String Fecha = FechaSolicitud.getText();

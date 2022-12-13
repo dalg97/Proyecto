@@ -28,11 +28,10 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         ConsultaClientes = new javax.swing.JButton();
         ConsultaSolicitudes = new javax.swing.JButton();
-        Analisis = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Catalogo = new javax.swing.JButton();
         jMenuBar9 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         Salir = new javax.swing.JMenuItem();
@@ -50,15 +49,8 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(java.awt.event.WindowEvent evt) {
-                formWindowClosing(evt);
-            }
-        });
 
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proyecto/Bundle"); // NOI18N
-        jButton1.setText(bundle.getString("Principal.jButton1.text")); // NOI18N
-
         ConsultaClientes.setText(bundle.getString("Principal.ConsultaClientes.text")); // NOI18N
         ConsultaClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,11 +65,16 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        Analisis.setText(bundle.getString("Principal.Analisis.text")); // NOI18N
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 0));
         jLabel1.setText(bundle.getString("Principal.jLabel1.text")); // NOI18N
+
+        Catalogo.setText(bundle.getString("Principal.Catalogo.text")); // NOI18N
+        Catalogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CatalogoActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText(bundle.getString("Principal.jMenu1.text")); // NOI18N
 
@@ -164,25 +161,20 @@ public class Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jButton1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ConsultaClientes)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(Analisis)))
-                        .addContainerGap(331, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ConsultaSolicitudes)
-                        .addGap(79, 79, 79))))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(308, 308, 308)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(Catalogo)
+                        .addGap(71, 71, 71)
+                        .addComponent(ConsultaClientes))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(ConsultaSolicitudes)))
+                .addContainerGap(597, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,12 +183,11 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(148, 148, 148)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ConsultaSolicitudes)
                     .addComponent(ConsultaClientes)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                .addComponent(Analisis)
-                .addGap(108, 108, 108))
+                    .addComponent(Catalogo))
+                .addGap(71, 71, 71)
+                .addComponent(ConsultaSolicitudes)
+                .addContainerGap(265, Short.MAX_VALUE))
         );
 
         pack();
@@ -205,6 +196,7 @@ public class Principal extends javax.swing.JFrame {
     //Pila mipila;
     Clientes client = new Clientes();
     Solicitudes solicitud = new Solicitudes();
+    //Test test = new Test();
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
         //Clientes client = new Clientes();
         client.setVisible(true);
@@ -275,7 +267,12 @@ public class Principal extends javax.swing.JFrame {
             dispose();
     }//GEN-LAST:event_formWindowClosing
     }
-
+    private void CatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatalogoActionPerformed
+        //test.setVisible(true);
+        //test.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_CatalogoActionPerformed
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -312,7 +309,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Analisis;
+    private javax.swing.JButton Catalogo;
     private javax.swing.JButton ConsultaClientes;
     private javax.swing.JButton ConsultaSolicitudes;
     private javax.swing.JMenuItem DevolucionVehiculo;
@@ -327,7 +324,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem RegistrarVehiculo;
     private javax.swing.JMenuItem Salir;
     private javax.swing.JMenuItem SolicitarAlquiler;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar9;
