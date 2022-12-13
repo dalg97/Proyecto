@@ -224,8 +224,7 @@ public class Principal extends javax.swing.JFrame {
                     null, "Ingrese numero de cedula: "));
             client.mipila.mostrarEspecifico(cedula);
         } else {
-            client.mipila.mostrarTotal();
-            
+            client.mipila.mostrarTotal();           
         }
     }//GEN-LAST:event_ConsultaClientesActionPerformed
 
