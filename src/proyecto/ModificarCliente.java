@@ -82,6 +82,10 @@ public class ModificarCliente extends javax.swing.JFrame {
         
         return eliminado;
     }
+    
+    public void guardar(){
+        
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -114,6 +118,11 @@ public class ModificarCliente extends javax.swing.JFrame {
         jLabel8.setText("Categoría");
 
         nameField.setEditable(false);
+        nameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameFieldActionPerformed(evt);
+            }
+        });
 
         surnameField.setEditable(false);
 
@@ -315,6 +324,10 @@ public class ModificarCliente extends javax.swing.JFrame {
     private void searchBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchBtn4ActionPerformed
+
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameFieldActionPerformed
 
     /**
      * @param args the command line arguments
