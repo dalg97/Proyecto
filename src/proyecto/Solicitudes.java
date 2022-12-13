@@ -3,7 +3,6 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author diego
@@ -29,23 +28,24 @@ public class Solicitudes extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        CedulaSolicitud = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        FechaSolicitud = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        MarcaSolicitud = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        PasajerosSolicitud = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        DiasSolicitud = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        CedulaSolicitud = new javax.swing.JTextField();
+        MarcaSolicitud = new javax.swing.JTextField();
         ModeloSolicitud = new javax.swing.JTextField();
-        CrearSolicitud = new javax.swing.JButton();
+        PasajerosSolicitud = new javax.swing.JTextField();
+        DiasSolicitud = new javax.swing.JTextField();
+        FechaSolicitud = new javax.swing.JTextField();
         SinLlave = new javax.swing.JCheckBox();
         Cargador = new javax.swing.JCheckBox();
-        GPS = new javax.swing.JCheckBox();
         Sensores = new javax.swing.JCheckBox();
+        GPS = new javax.swing.JCheckBox();
+        CrearSolicitud = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,21 +53,29 @@ public class Solicitudes extends javax.swing.JFrame {
 
         jLabel2.setText("Fecha");
 
-        FechaSolicitud.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FechaSolicitudActionPerformed(evt);
-            }
-        });
+        jLabel3.setText("Marca");
 
-        jLabel4.setText("Marca");
+        jLabel4.setText("Modelo");
 
         jLabel5.setText("Pasajeros");
 
-        jLabel6.setText("Extras");
+        jLabel6.setText("Dias");
 
-        jLabel7.setText("Dias");
+        jLabel7.setText("Extras");
 
-        jLabel8.setText("Modelo");
+        ModeloSolicitud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModeloSolicitudActionPerformed(evt);
+            }
+        });
+
+        SinLlave.setText("Arranque sin llave");
+
+        Cargador.setText("Cargador Inalambrico");
+
+        Sensores.setText("Sensores + Camara reversa");
+
+        GPS.setText("GPS - Navegador en tiempo real");
 
         CrearSolicitud.setText("Crear Solicitud");
         CrearSolicitud.addActionListener(new java.awt.event.ActionListener() {
@@ -76,129 +84,119 @@ public class Solicitudes extends javax.swing.JFrame {
             }
         });
 
-        SinLlave.setText("Arranque sin llave");
-        SinLlave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SinLlaveActionPerformed(evt);
-            }
-        });
-
-        Cargador.setText("Cargador Inalambrico");
-
-        GPS.setText("GPS - Navegador en tiempo real");
-        GPS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GPSActionPerformed(evt);
-            }
-        });
-
-        Sensores.setText("Sensores + Camara reversa");
+        jLabel8.setText("Solicitudes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addGap(44, 44, 44)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(CedulaSolicitud)
-                                    .addComponent(FechaSolicitud)
-                                    .addComponent(MarcaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(PasajerosSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(268, 268, 268))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addGap(59, 59, 59)
-                                        .addComponent(ModeloSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(DiasSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SinLlave)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3))
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MarcaSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                            .addComponent(ModeloSolicitud)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
                             .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel2))
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CedulaSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                            .addComponent(FechaSolicitud)
+                            .addComponent(PasajerosSolicitud)
+                            .addComponent(DiasSolicitud))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(SinLlave)
+                        .addGap(92, 92, 92))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Cargador)
                             .addComponent(GPS)
-                            .addComponent(Sensores)))
+                            .addComponent(Sensores))
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(197, 197, 197))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(343, 343, 343)
-                        .addComponent(CrearSolicitud)))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addGap(245, 245, 245)
+                        .addComponent(CrearSolicitud))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(263, 263, 263)
+                        .addComponent(jLabel8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(CedulaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(FechaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(SinLlave)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cargador)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(GPS))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(MarcaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(PasajerosSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel1)
+                            .addComponent(CedulaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(SinLlave)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(Sensores))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(Cargador))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(jLabel7))
-                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(MarcaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(ModeloSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(DiasSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(ModeloSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(PasajerosSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(DiasSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(GPS)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Sensores))))
+                    .addComponent(FechaSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
                 .addComponent(CrearSolicitud)
-                .addGap(100, 100, 100))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void FechaSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechaSolicitudActionPerformed
+    private void ModeloSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModeloSolicitudActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_FechaSolicitudActionPerformed
+    }//GEN-LAST:event_ModeloSolicitudActionPerformed
 
     private void CrearSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearSolicitudActionPerformed
-       //Clientes client = new Clientes();
-       int Cedula = Integer.parseInt(CedulaSolicitud.getText());
+        int Cedula = Integer.parseInt(CedulaSolicitud.getText());
        System.out.println(Cedula);
        String Fecha = FechaSolicitud.getText();
        String Estado = "Registrada";
@@ -242,16 +240,8 @@ public class Solicitudes extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null,
                    "Usuario no existe");
        }
-       limpiarSolicitudes();
+       limpiarSolicitudes(); 
     }//GEN-LAST:event_CrearSolicitudActionPerformed
-
-    private void SinLlaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SinLlaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SinLlaveActionPerformed
-
-    private void GPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GPSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GPSActionPerformed
     private void SubirCategoria(int Cedula,String Categoria,double precio){
         if(precio > 70000){
             if(Categoria == "Oro"){
@@ -269,6 +259,7 @@ public class Solicitudes extends javax.swing.JFrame {
             }
         }
     }
+    
     private void limpiarSolicitudes(){
         //Limpiar todos los campos
         CedulaSolicitud.setText("");
@@ -282,6 +273,7 @@ public class Solicitudes extends javax.swing.JFrame {
         SinLlave.setSelected(false);
         Sensores.setSelected(false);
     }
+
     /**
      * @param args the command line arguments
      */
@@ -331,6 +323,7 @@ public class Solicitudes extends javax.swing.JFrame {
     private javax.swing.JCheckBox SinLlave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
