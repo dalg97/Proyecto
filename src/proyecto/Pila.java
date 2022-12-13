@@ -114,7 +114,7 @@ public class Pila {
         // de la pila.
         while (exist != true && aux != null) {
             // Compara si el value del node es igual que al de reference.
-            System.out.println("Working on "+aux.getCliente().getCedula());
+            //System.out.println("Working on "+aux.getCliente().getCedula());
             if (Cedula == aux.getCliente().getCedula()) {
                 // Cambia el value de la bandera.
                 test = "Existe: "+aux.getCliente().getCedula();

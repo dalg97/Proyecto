@@ -24,7 +24,6 @@ public class Solicitudes extends javax.swing.JFrame {
      */
     Cola micola = new Cola();
     Clientes client = new Clientes();
-    //Principal principal = new Principal();
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -214,8 +213,8 @@ public class Solicitudes extends javax.swing.JFrame {
        int Pasajeros = Integer.parseInt(PasajerosSolicitud.getText());
        int Dias = Integer.parseInt(DiasSolicitud.getText());
        String Modelo = ModeloSolicitud.getText();
-       System.out.println(client.mipila.search1(Cedula));
-       //if(client.mipila.search(Cedula)){
+       //System.out.println(client.mipila.search1(Cedula));
+       if(client.mipila.search(Cedula)){
            String Categoria = client.mipila.mostrarCategoria(Cedula);
            if(SinLlave.isSelected()){
                 String Extras = "Arranque sin llave";
@@ -240,10 +239,10 @@ public class Solicitudes extends javax.swing.JFrame {
             }
            JOptionPane.showMessageDialog(null,"Solicitud "
                 + "registrada exitosamente");
-        //}else{
-         //  JOptionPane.showMessageDialog(null,
-        //           "Usuario no existe");
-       //}
+        }else{
+           JOptionPane.showMessageDialog(null,
+                   "Usuario no existe");
+       }
        limpiarSolicitudes();
     }//GEN-LAST:event_CrearSolicitudActionPerformed
 

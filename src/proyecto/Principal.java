@@ -165,16 +165,13 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(Catalogo)
-                        .addGap(71, 71, 71)
-                        .addComponent(ConsultaClientes))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(ConsultaSolicitudes)))
-                .addContainerGap(597, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addComponent(Catalogo)
+                .addGap(71, 71, 71)
+                .addComponent(ConsultaClientes)
+                .addGap(71, 71, 71)
+                .addComponent(ConsultaSolicitudes)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,10 +181,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(148, 148, 148)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultaClientes)
-                    .addComponent(Catalogo))
-                .addGap(71, 71, 71)
-                .addComponent(ConsultaSolicitudes)
-                .addContainerGap(265, Short.MAX_VALUE))
+                    .addComponent(Catalogo)
+                    .addComponent(ConsultaSolicitudes))
+                .addContainerGap(326, Short.MAX_VALUE))
         );
 
         pack();
