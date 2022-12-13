@@ -9,11 +9,17 @@ package proyecto;
  * @author diego
  */
 public class Nodo2 {
+
     //Atributos del Nodo
     private Vehiculo vehiculo;
     private Nodo2 next;
     private Nodo2 atras;
-    
+
+    @Override
+    public String toString() {
+        return "Nodo2{" + "vehiculo=" + vehiculo + '}';
+    }
+
     //Setters and Getters
     public Vehiculo getVehiculo() {
         return vehiculo;
@@ -26,7 +32,7 @@ public class Nodo2 {
     public void setNext(Nodo2 next) {
         this.next = next;
     }
-    
+
     public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
     }
@@ -39,7 +45,7 @@ public class Nodo2 {
         this.atras = atras;
     }
 
-    public Nodo2(Vehiculo vehiculo){
+    public Nodo2(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
     }
 }

@@ -4,18 +4,21 @@
  */
 package proyecto;
 
-
 /**
  *
  * @author diego
+ * @author danny
  */
 public class Lista {
+
     private Nodo2 cabeza;
-    
+    private Nodo2 ultimo;
+
     public void insertar(Vehiculo vehiculo) {
         if (cabeza == null) {
             //si la lista esta vacia, se inserta como la cabeza
             cabeza = new Nodo2(vehiculo);
+            ultimo = cabeza;
             //si no esta vacia, verifica si el id es menor al id de la cabeza
         } else if (vehiculo.getAnio() < cabeza.getVehiculo().getAnio()) {
             //si es menor, crea el nodo temporal y lo asigna a la derecha
@@ -35,7 +38,7 @@ public class Lista {
             //si no cumple con las anteriores, se crea el nodo temporal con 
             //el valor de la cabeza e ingresa al ciclo para recorrer la lista
             Nodo2 aux = cabeza;
-            
+
             //si el id del siguiente nodo es mayor al id del nuevo nodo, este 
             //pasaria a ser el siguiente nodo
             while (aux.getNext() != null
@@ -48,9 +51,12 @@ public class Lista {
             temp.setNext(aux.getNext());
             aux.setNext(temp);
             temp.setAtras(aux);
+            temp.getNext().setAtras(temp); //nuevo
         }
+        ultimo.setNext(cabeza);
+        cabeza.setAtras(ultimo);
     }
-    
+
     public void modificar(Vehiculo vehiculo) {
         //Buscar el ID y ver si este existe
         if (cabeza != null) {
@@ -58,28 +64,28 @@ public class Lista {
             Nodo2 aux = cabeza; //utilizo aux como un buscador
             //La lista no puede estar vacía para poder obtener los 
             //datos exitentes y verificar que estos sean  menores al ID 
-            while (aux != null && aux.getVehiculo().getAnio() < 
-                    vehiculo.getAnio()) {
-                aux = aux. getNext (); //Continuar con la busqueda
+            while (aux != null && aux.getVehiculo().getAnio()
+                    < vehiculo.getAnio()) {
+                aux = aux.getNext(); //Continuar con la busqueda
             }
             // Si el aux es diferente a nulo y se logran obtener los datos
             //siempre y cuando el ID exista se va a proceder a modificar el 
             //nombre
-            if (aux != null && aux.getVehiculo().getAnio() == 
-                    vehiculo.getAnio()){
+            if (aux != null && aux.getVehiculo().getAnio()
+                    == vehiculo.getAnio()) {
                 //Se obtienen los datos para cambiar el valor del nombre
                 aux.getVehiculo().setEstado("Alquilado");
             }
         }
     }
-    
+
     public void eliminar(String placa) { //definimos el metodo llamado elimina y 
         //ponemos como parametro el int id 
         //Lo que vamos a hacer es eliminar el id de una persona
-       if (cabeza != null) {//Si la lista no esta nula entonces empieza a buscar
+        if (cabeza != null) {//Si la lista no esta nula entonces empieza a buscar
             if (cabeza.getVehiculo().getPlaca() == placa) {
-            //buscamos el id utilizando un 
-           //if statement y verificamos que la cabeza cumpla el parametro del id
+                //buscamos el id utilizando un 
+                //if statement y verificamos que la cabeza cumpla el parametro del id
                 cabeza = cabeza.getNext(); //sino cumple como parametro, 
                 //seguimos buscando y definimos el siguiente nodo como cabeza
             } else {
@@ -100,19 +106,25 @@ public class Lista {
 
                     aux.setNext(aux.getNext().getNext());
                     aux.getNext().getNext().setAtras(aux);
-                   //y en este ultimo paso lo que hacemos es cambiar referencias
+                    //y en este ultimo paso lo que hacemos es cambiar referencias
                 }
             }
         }
     }
-    
+
     @Override
     public String toString() {
         Nodo2 aux = cabeza;
         String s = "";
-        while (aux != null) {
+        if (aux != null) {
             s += aux + ", ";
             aux = aux.getNext();
+            while (aux != cabeza) {
+                s += aux + ", ";
+                aux = aux.getNext();
+            }
+        } else {
+            s += "vacia";
         }
         return s;
     }

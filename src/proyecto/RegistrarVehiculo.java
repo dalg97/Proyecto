@@ -362,7 +362,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         String combustible = CombustibleVehiculo.getText();
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
-
+        
         {
         }
         JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
