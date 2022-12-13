@@ -364,6 +364,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
         
         {
+                        
         }
         JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
                 + "exitosamente");
