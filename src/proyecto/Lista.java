@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -109,6 +111,29 @@ public class Lista {
                     //y en este ultimo paso lo que hacemos es cambiar referencias
                 }
             }
+        }
+
+    }
+
+    public void mostrarVehiculos() {
+        Nodo2 aux = cabeza;
+        String output = "";
+        // Recorre la lista hasta el ultimo nodo
+        while (aux != null) {
+            output += " Nombre: " + aux.getVehiculo().getPlaca() + " | "
+                    + " Nombre: " + aux.getVehiculo().getMarca() + " | "
+                    + " Nombre: " + aux.getVehiculo().getModelo() + " | "
+                    + " Nombre: " + aux.getVehiculo().getAnio() + " | "
+                    + " Nombre: " + aux.getVehiculo().getColor() + " | "
+                    + " Nombre: " + aux.getVehiculo().getCilidrada() + " | "
+                    + " Nombre: " + aux.getVehiculo().getCombustible() + " | "
+                    + " Nombre: " + aux.getVehiculo().getPasajeros() + " | "
+                    + "Cedula: " + aux.getVehiculo().getPrecio() + "\n";
+            aux = aux.getNext();
+        }
+        JOptionPane.showMessageDialog(null, output);
+        {
+
         }
     }
 
