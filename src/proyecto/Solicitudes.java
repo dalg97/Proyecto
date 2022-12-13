@@ -255,14 +255,14 @@ public class Solicitudes extends javax.swing.JFrame {
     private void SubirCategoria(int Cedula,String Categoria,double precio){
         if(precio > 70000){
             if(Categoria == "Oro"){
-                client.mipila.SubirCategoria(Cedula,Categoria);
-                micola.SubirCategoria(Cedula, Categoria);
+                client.mipila.SubirCategoria(Cedula,"Zafiro");
+                micola.SubirCategoria(Cedula, "Zafiro");
             }else if(Categoria == "Plata"){
-                client.mipila.SubirCategoria(Cedula,Categoria);
-                micola.SubirCategoria(Cedula, Categoria);
+                client.mipila.SubirCategoria(Cedula,"Oro");
+                micola.SubirCategoria(Cedula, "Oro");
             }else if(Categoria == "Bronce"){
-                client.mipila.SubirCategoria(Cedula,Categoria);
-                micola.SubirCategoria(Cedula, Categoria);
+                client.mipila.SubirCategoria(Cedula,"Plata");
+                micola.SubirCategoria(Cedula, "Plata");
             }else{
                 JOptionPane.showMessageDialog(null,
                    "Ya tienes la Categoria maxima");
