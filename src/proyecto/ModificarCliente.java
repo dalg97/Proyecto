@@ -38,7 +38,7 @@ public class ModificarCliente extends javax.swing.JFrame {
     public boolean search(long id) {
         boolean existe = false;
         Pila mipila = new Pila();
-        for (Cliente c: mipila.) {
+        for (Clientes c: mipila.search()) {
             if (Clientes.getCedula() == id) {
                 mipila = c;
                 existe = true;
@@ -382,7 +382,4 @@ public class ModificarCliente extends javax.swing.JFrame {
     private javax.swing.JTextField surnameField;
     // End of variables declaration//GEN-END:variables
 
-    private void initComponents() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
 }
