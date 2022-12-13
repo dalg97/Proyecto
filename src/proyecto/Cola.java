@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author diego
@@ -58,6 +60,16 @@ public class Cola {
         }
     }
     
+    public void SubirCategoria(int cedula,String Categoria){
+        Nodo3 aux = frente;
+        while(aux != null){
+            if(cedula == aux.getSolicitud().getCedula()){
+                aux.getSolicitud().setCategoria(Categoria);
+                aux = null;
+            }else{
+            aux = aux.getAtras(); }
+        }
+    }
     public Nodo3 atiende(){
         Nodo3 aux = frente;
         if(frente!=null){

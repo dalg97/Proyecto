@@ -37,10 +37,11 @@ public class Nodo3 {
     @Override
     public String toString() {
         return "Solicitud: \n"+"Cedula: "+solicitud.getCedula()+
-                "\nFecha: "+solicitud.getFecha()+"\nDias: "+solicitud.getDias()+
-                "\nEstado: "+solicitud.getEstado()+"\nPasajeros: "+
-                solicitud.getPasajeros()+"\nMarca: "+solicitud.getMarca()+
-                "\nModelo: "+solicitud.getModelo()+"\nExtras: "+
-                solicitud.getExtras()+"\nCat: "+solicitud.getCategoria();
+                " | Fecha: "+solicitud.getFecha()+" | Dias: "+solicitud.getDias()+
+                " | Estado: "+solicitud.getEstado()+" | Pasajeros: "+
+                solicitud.getPasajeros()+" | Marca: "+solicitud.getMarca()+
+                " | Modelo: "+solicitud.getModelo()+" | Extras: "+
+                solicitud.getExtras()+" | Categoria: "+solicitud.getCategoria()+
+                " | Precio: "+solicitud.getPrecio()+"\n";
     }
 }
