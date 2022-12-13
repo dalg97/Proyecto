@@ -104,28 +104,19 @@ public class Pila {
         // Retorna el value de la bandera.
         return exist;
     }
-    public String search1(int Cedula) {
-        // Crea una copia de la pila.
+    public void SubirCategoria(int cedula,String Categoria){
         Nodo1 aux = cima;
-        String test = "";
-        // Bandera para verificar si exist el elemento a search.
-        boolean exist = false;
-        // Recorre la pila hasta llegar encontrar el node o llegar al final
-        // de la pila.
-        while (exist != true && aux != null) {
-            // Compara si el value del node es igual que al de reference.
-            //System.out.println("Working on "+aux.getCliente().getCedula());
-            if (Cedula == aux.getCliente().getCedula()) {
-                // Cambia el value de la bandera.
-                test = "Existe: "+aux.getCliente().getCedula();
-            } else {
-                // Avanza al siguiente node.
-                aux = aux.getSiguiente();
-            }
+        while(aux != null){
+            if(cedula == aux.getCliente().getCedula()){
+                aux.getCliente().setCategoria(Categoria);
+                aux = null;
+            }else{
+            aux = aux.getSiguiente(); }
         }
-        // Retorna el value de la bandera.
-        return test;
+        JOptionPane.showMessageDialog(null,
+                   "Usuario ha subido de Categoria");
     }
+    
     public void popModificado(int Cedula){
         // Consulta si el value exist en la pila.
         if (search(Cedula)) {

@@ -17,11 +17,12 @@ public class Solicitud {
     private String modelo;
     private String extras;
     private String categoria;
+    private double precio;
     
     //Constructor
     public Solicitud(int cedula,String fecha,int dias,String estado,
             int pasajeros,String marca,String modelo,String extras,
-            String categoria){
+            String categoria,double precio){
         this.cedula = cedula;
         this.fecha = fecha;
         this.dias = dias;
@@ -31,6 +32,7 @@ public class Solicitud {
         this.modelo = modelo;
         this.extras = extras;
         this.categoria= categoria;
+        this.precio = precio;
     }
     
     //Setters and Getters
@@ -104,5 +106,13 @@ public class Solicitud {
 
     public void setExtras(String extras) {
         this.extras = extras;
-    } 
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 }
