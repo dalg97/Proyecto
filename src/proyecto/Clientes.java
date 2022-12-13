@@ -161,7 +161,7 @@ public class Clientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    Pila mipila = new Pila();
+    static Pila mipila = new Pila();
     private void OroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OroActionPerformed
         Oro.setSelected(true);
     }//GEN-LAST:event_OroActionPerformed
