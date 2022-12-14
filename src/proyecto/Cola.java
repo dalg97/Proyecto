@@ -89,7 +89,13 @@ public class Cola {
         }
         return s;
     }
-    public void asignar(){
-        
+    public String asignar(){
+        Nodo3 aux = frente;
+        if(frente!=null){
+            frente=frente.getAtras();
+            aux.setAtras(null);
+            
+        }
+        return "";
     }
 }

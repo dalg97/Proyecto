@@ -104,6 +104,31 @@ public class Pila {
         // Retorna el value de la bandera.
         return exist;
     }
+    
+    public void modificar(int Cedula) {
+        // Crea una copia de la pila.
+        Nodo1 aux = cima;
+        // Bandera para verificar si exist el elemento a search.
+        boolean exist = false;
+        // Recorre la pila hasta llegar encontrar el node o llegar al final
+        // de la pila.
+        while (exist != true && aux != null) {
+            // Compara si el value del node es igual que al de reference.
+            if (Cedula == aux.getCliente().getCedula()) {
+                // Cambia el value de la bandera.
+                aux.getCliente().setCategoria("");
+                aux.getCliente().setCorreo("");
+                aux.getCliente().setFecha("");
+                aux.getCliente().setNombre("");
+            } else {
+                // Avanza al siguiente node.
+                aux = aux.getSiguiente();
+            }
+        }
+        // Retorna el value de la bandera.
+        JOptionPane.showMessageDialog(null,
+                "Usuario Modificado");
+    }
     public void SubirCategoria(int cedula,String Categoria){
         Nodo1 aux = cima;
         while(aux != null){

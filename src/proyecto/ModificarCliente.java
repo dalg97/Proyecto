@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package proyecto;
 import javax.swing.JOptionPane;
 /**
@@ -16,10 +13,11 @@ public class ModificarCliente extends javax.swing.JFrame {
     public ModificarCliente() {
         initComponents();
         setTitle(" Modificar Cliente");
-        Clientes client = new Clientes();
-        Pila mipila = new Pila();
+        //Clientes client = new Clientes();
+        //Pila mipila = new Pila();
         
     }
+    Clientes client = new Clientes();
 //esta función limpia todos los espaciós para que al ingresar una cedula nuevo
     //en la parte de los textos no se mantenga la información del cliente
     //pasado
@@ -39,41 +37,8 @@ public class ModificarCliente extends javax.swing.JFrame {
     public void bloquear() {
         idField.setEditable(false);
     }
-    public boolean search(int cedula) {
-        boolean existe = false;
-        nodo1 aux=cima;
-        for (Clientes c: mipila.search()) {
-            if (Clientes.getCedula() == id) {
-                mipila = c;
-                existe = true;
-            }
-        }
-        
-        if (existe) {
-            nameField.setText(mipila.getNombre());
-            surnameField.setText(clientes.getApellidos());
-            ageField.setText(String.valueOf(clientes.getEdad()));
-            idField.setText(String.valueOf(clientes.getIdentificacion()));
- 
-        } 
-        
-        return existe;
-    }
-    public void modificar() {
-        if (!searchField.getText().isEmpty()) {
-            if (search(Long.parseLong(searchField.getText()))) {
-                eliminar(Long.parseLong(searchField.getText()));
-            }
-        }
-        nameField.setEditable(true);
-        idField.setEditable(false);
-        emailField.setEditable(true);
-        
-        
-    }
 
-    
-    
+        
     public boolean eliminar(long id) {
         boolean eliminado = false;
         for (int i=0; i<Main.mipila.size(); i++) {
@@ -291,16 +256,12 @@ public class ModificarCliente extends javax.swing.JFrame {
     private void searchBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn3ActionPerformed
         // TODO add your handling code here:
         limpiar();
-        if (!searchField.getText().isEmpty()) {
-            boolean existe = search(Long.parseLong(searchField.getText()));
-            if (!existe) {
                 JOptionPane.showMessageDialog(null, 
                         "Cliente no existe");
-            }
-        } else {
+
             JOptionPane.showMessageDialog(null, "Por favor "
                     + "ingrese una identificacion");
-        }
+
     }//GEN-LAST:event_searchBtn3ActionPerformed
 
     private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
