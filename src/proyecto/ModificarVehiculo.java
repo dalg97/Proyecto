@@ -242,6 +242,10 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         CantPasajerosVehiculo.setText(null);
         PrecioAlquilerVehiculo.setText(null);
         EstadoVehiculo.setText(null);
+        ExtraArranque.setSelected(false);
+        ExtraCargador.setSelected(false);
+        ExtraGPS.setSelected(false);
+        ExtraSenReversa.setSelected(false);    
     }
 
     private void BT_ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ActualizarActionPerformed
@@ -257,9 +261,27 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
         String estado = EstadoVehiculo.getText();
-        vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
+        if(ExtraArranque.isSelected()){
+            String extra = "Arranque sin llave";
+            vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
                 cilidrada, combustible, pasajeros, precio, 
                 estado, estado);
+        }else if(ExtraCargador.isSelected()){
+            String extra = "Cargador Inalambrico";
+            vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
+                cilidrada, combustible, pasajeros, precio, 
+                estado, estado);
+        }else if(ExtraGPS.isSelected()){
+            String extra = "GPS - Navegador en Tiempo Real";
+            vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
+                cilidrada, combustible, pasajeros, precio, 
+                estado, estado);
+        }else {
+            String extra = "Sensores + Camara Reversa";
+            vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
+                cilidrada, combustible, pasajeros, precio, 
+                estado, estado);
+        }
 
        JOptionPane.showMessageDialog(null,"Vehiculo fue Modificado"
                 + "exitosamente");
