@@ -193,6 +193,7 @@ public class Principal extends javax.swing.JFrame {
     Clientes client = new Clientes();
     Solicitudes solicitud = new Solicitudes();
     ModificarCliente modificar = new ModificarCliente();
+    RegistrarVehiculo vehicle = new RegistrarVehiculo();
     //Test test = new Test();
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
         //Clientes client = new Clientes();
@@ -239,7 +240,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_ConsultaSolicitudesActionPerformed
 
     private void RegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVehiculoActionPerformed
-        RegistrarVehiculo vehicle = new RegistrarVehiculo();
+
         vehicle.setVisible(true);
         vehicle.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_RegistrarVehiculoActionPerformed
@@ -272,8 +273,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
     }
     private void CatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatalogoActionPerformed
-        //test.setVisible(true);
-        //test.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        vehicle.milista.mostrarVehiculos();
     }//GEN-LAST:event_CatalogoActionPerformed
     
     
