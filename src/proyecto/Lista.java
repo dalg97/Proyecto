@@ -128,7 +128,8 @@ public class Lista {
                     + " Cilindrada: " + aux.getVehiculo().getCilidrada() + " | "
                     + " Combustible: " + aux.getVehiculo().getCombustible() + " | "
                     + " Cant.Pasajeros: " + aux.getVehiculo().getPasajeros() + " | "
-                    + " Precio: " + aux.getVehiculo().getPrecio() + "\n";
+                    + " Precio: " + aux.getVehiculo().getPrecio() + " | "
+                    + " Estado: " + aux.getVehiculo().getEstado()+ " | "+ "\n";
             aux = aux.getNext();
         }
         JOptionPane.showMessageDialog(null, output);
