@@ -49,6 +49,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         ExtraArranque = new javax.swing.JCheckBox();
         ExtraCargador = new javax.swing.JCheckBox();
         ExtraGPS = new javax.swing.JCheckBox();
@@ -56,7 +57,8 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         Limpiar = new javax.swing.JButton();
         BT_Actualizar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        EstadoVehiculo = new javax.swing.JTextField();
+        Fondo = new javax.swing.JLabel();
         jMenuBar9 = new javax.swing.JMenuBar();
         MenuClientes = new javax.swing.JMenu();
         RegistrarCliente = new javax.swing.JMenuItem();
@@ -148,6 +150,10 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         jLabel12.setText("Extras:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, -1));
 
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Estado:");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
+
         ExtraArranque.setForeground(new java.awt.Color(0, 0, 0));
         ExtraArranque.setText("Arranque sin llave");
         ExtraArranque.addActionListener(new java.awt.event.ActionListener() {
@@ -192,9 +198,10 @@ public class ModificarVehiculo extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, -1, -1));
+        jPanel1.add(EstadoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 160, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Car Rental.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 480));
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Car Rental.jpg"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 480));
 
         MenuClientes.setText("Clientes");
 
@@ -321,6 +328,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         CombustibleVehiculo.setText(null);
         CantPasajerosVehiculo.setText(null);
         PrecioAlquilerVehiculo.setText(null);
+        EstadoVehiculo.setText(null);
     }//GEN-LAST:event_LimpiarActionPerformed
 
     private void limpiarVehiculos() {
@@ -334,6 +342,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         CombustibleVehiculo.setText(null);
         CantPasajerosVehiculo.setText(null);
         PrecioAlquilerVehiculo.setText(null);
+        EstadoVehiculo.setText(null);
     }
 
     private void BT_ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ActualizarActionPerformed
@@ -348,11 +357,12 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         String combustible = CombustibleVehiculo.getText();
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
+        String estado = EstadoVehiculo.getText();
 
         {
 
         }
-        JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
+        JOptionPane.showMessageDialog(null, "Vehiculo fue Modificado "
                 + "exitosamente");
         limpiarVehiculos();
 
@@ -412,10 +422,12 @@ public class ModificarVehiculo extends javax.swing.JFrame {
     private javax.swing.JMenuItem DevolucionVehiculo;
     private javax.swing.JMenuItem EliminarCliente;
     private javax.swing.JMenuItem EliminarVehiculo;
+    private javax.swing.JTextField EstadoVehiculo;
     private javax.swing.JCheckBox ExtraArranque;
     private javax.swing.JCheckBox ExtraCargador;
     private javax.swing.JCheckBox ExtraGPS;
     private javax.swing.JCheckBox ExtraSenReversa;
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton Limpiar;
     private javax.swing.JTextField MarcaVehiculo;
     private javax.swing.JMenu MenuAlquiler;
@@ -430,10 +442,10 @@ public class ModificarVehiculo extends javax.swing.JFrame {
     private javax.swing.JMenuItem RegistrarVehiculo;
     private javax.swing.JMenuItem SolicitarAlquiler;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

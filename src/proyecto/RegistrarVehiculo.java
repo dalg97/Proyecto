@@ -58,7 +58,9 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        EstadoVehiculo = new javax.swing.JTextField();
+        Fondo = new javax.swing.JLabel();
         jMenuBar9 = new javax.swing.JMenuBar();
         MenuClientes = new javax.swing.JMenu();
         RegistrarCliente = new javax.swing.JMenuItem();
@@ -205,8 +207,13 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 370, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Car Rental.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 480));
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Estado:");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
+        jPanel1.add(EstadoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 160, -1));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Car Rental.jpg"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 480));
 
         MenuClientes.setText("Clientes");
 
@@ -334,6 +341,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         CombustibleVehiculo.setText(null);
         CantPasajerosVehiculo.setText(null);
         PrecioAlquilerVehiculo.setText(null);
+        EstadoVehiculo.setText(null);
     }//GEN-LAST:event_LimpiarActionPerformed
 
     private void limpiarVehiculos() {
@@ -347,6 +355,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         CombustibleVehiculo.setText(null);
         CantPasajerosVehiculo.setText(null);
         PrecioAlquilerVehiculo.setText(null);
+        EstadoVehiculo.setText(null);
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -367,6 +376,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         String combustible = CombustibleVehiculo.getText();
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
+        String estado = EstadoVehiculo.getText();
         
         {
                         
@@ -442,10 +452,12 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private javax.swing.JMenuItem DevolucionVehiculo;
     private javax.swing.JMenuItem EliminarCliente;
     private javax.swing.JMenuItem EliminarVehiculo;
+    private javax.swing.JTextField EstadoVehiculo;
     private javax.swing.JCheckBox ExtraArranque;
     private javax.swing.JCheckBox ExtraCargador;
     private javax.swing.JCheckBox ExtraGPS;
     private javax.swing.JCheckBox ExtraSenReversa;
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton Limpiar;
     private javax.swing.JTextField MarcaVehiculo;
     private javax.swing.JMenu MenuAlquiler;
@@ -460,10 +472,10 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private javax.swing.JMenuItem RegistrarVehiculo;
     private javax.swing.JMenuItem SolicitarAlquiler;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
