@@ -245,7 +245,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         ExtraArranque.setSelected(false);
         ExtraCargador.setSelected(false);
         ExtraGPS.setSelected(false);
-        ExtraSenReversa.setSelected(false);    
+        ExtraSenReversa.setSelected(false);     
     }
 
     private void BT_ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ActualizarActionPerformed
