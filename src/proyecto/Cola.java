@@ -79,6 +79,20 @@ public class Cola {
         return aux;
     }
     
+    public boolean buscar(int Cedula){
+        boolean exist = false;
+        Nodo3 aux = frente;
+        while(aux!=null){
+            if(Cedula == aux.getSolicitud().getCedula()){
+                exist=true;
+                aux = null;
+            }else {
+                aux.getAtras();
+            }
+        }
+        return exist;
+    }
+    
     @Override
     public String toString(){
         String s="";
