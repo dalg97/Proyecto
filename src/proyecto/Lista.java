@@ -12,7 +12,7 @@ public class Lista {
 
     private Nodo2 cabeza;
     //private Nodo2 ultimo;
-    private String array [] = new String [10];
+    private String array [] = new String [11];
 
     public void insertar(Vehiculo vehiculo) {
         if (cabeza == null) {
@@ -139,10 +139,11 @@ public class Lista {
                     + " Año: " + aux.getVehiculo().getAnio() + " | "
                     + " Color: " + aux.getVehiculo().getColor() + " | "
                     + " Cilindrada: " + aux.getVehiculo().getCilidrada()+" | "
-                    + " Combustible: " + aux.getVehiculo().getCombustible()+" | "
-                    + " Cant.Pasajeros: " + aux.getVehiculo().getPasajeros()+" | "
-                    + " Precio: " + aux.getVehiculo().getPrecio() + " | "
-                    + " Estado: " + aux.getVehiculo().getEstado()+ " | "+ "\n";
+                   + " Combustible: " + aux.getVehiculo().getCombustible()+" | "
+                  + " Cant.Pasajeros: " + aux.getVehiculo().getPasajeros()+" | "
+                   + " Precio: " + aux.getVehiculo().getPrecio() + " | "
+                   + " Estado: " + aux.getVehiculo().getEstado()+ " | "+ "\n"
+                    +" Extras :" + aux.getVehiculo().getExtras();
             aux = aux.getNext();
         }
         JOptionPane.showMessageDialog(null, output);
@@ -173,20 +174,25 @@ public class Lista {
             String color, int cilindrada, String combustible, int pasajeros,
             int precio, String Estado, String Extras){
         Nodo2 aux=cabeza;
-        if(Placa == aux.getVehiculo().getPlaca()){
-            aux.getVehiculo().setPlaca(Placa);
-            aux.getVehiculo().setColor(color);
-            aux.getVehiculo().setExtras(Extras);
-            aux.getVehiculo().setEstado(Estado);
-            aux.getVehiculo().setMarca(marca);
-            aux.getVehiculo().setCombustible(combustible);
-            aux.getVehiculo().setPasajeros(pasajeros);
-            aux.getVehiculo().setCilidrada(cilindrada);
-            aux.getVehiculo().setPrecio(precio);
-            aux.getVehiculo().setAnio(anio);
-            aux.getVehiculo().setModelo(modelo);
-            
-        }
+        while (aux != null) {
+            if(Placa.equals(aux.getVehiculo().getPlaca())){
+                System.out.println("Entro al if");
+                aux.getVehiculo().setPlaca(Placa);
+                aux.getVehiculo().setColor(color);
+                aux.getVehiculo().setExtras(Extras);
+                aux.getVehiculo().setEstado(Estado);
+                aux.getVehiculo().setMarca(marca);
+                aux.getVehiculo().setCombustible(combustible);
+                aux.getVehiculo().setPasajeros(pasajeros);
+                aux.getVehiculo().setCilidrada(cilindrada);
+                aux.getVehiculo().setPrecio(precio);
+                aux.getVehiculo().setAnio(anio);
+                aux.getVehiculo().setModelo(modelo);
+                aux = null;
+            }else{
+                aux.getNext();
+            }
+        }  
     }
     public void getAtributos(String placa){
         Nodo2 aux = cabeza;
@@ -195,7 +201,7 @@ public class Lista {
         // de la pila.
         while (aux != null) {
             // Compara si el value del node es igual que al de reference.
-            if (placa == aux.getVehiculo().getPlaca()) {
+            if (placa.equals(aux.getVehiculo().getPlaca())) {
                 // Cambia el value de la bandera.
                 array[0] = aux.getVehiculo().getPlaca();
                 array[1] = aux.getVehiculo().getColor();
@@ -213,14 +219,11 @@ public class Lista {
             } else {
                 // Avanza al siguiente node.
                 aux = aux.getNext();
-            }
-    
-            
-        }
-            
-        }
+            }    
+        }        
+   }
      
-        }
+}
     
         
 
