@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package proyecto;
 
 import javax.swing.JOptionPane;
@@ -85,37 +82,50 @@ public class Lista {
     public void eliminar(String placa) { //definimos el metodo llamado elimina y 
         //ponemos como parametro el int id 
         //Lo que vamos a hacer es eliminar el id de una persona
+        System.out.println(placa);
         if (cabeza != null) {//Si la lista no esta nula entonces empieza a buscar
-            if (cabeza.getVehiculo().getPlaca() == placa) {
+            System.out.println(cabeza.getVehiculo().getPlaca());
+            if (cabeza.getVehiculo().getPlaca().equals(placa)) {
                 //buscamos el id utilizando un 
                 //if statement y verificamos que la cabeza cumpla el parametro del id
-                cabeza = cabeza.getNext(); //sino cumple como parametro, 
+                if(cabeza.getNext() == null){
+                    cabeza = null;
+                }else{
+                cabeza = cabeza.getNext();
+                }//sino cumple como parametro, 
                 //seguimos buscando y definimos el siguiente nodo como cabeza
             } else {
                 Nodo2 aux = cabeza; //se utiliza el modo auxiliar 
                 //Mientras el nodo no este vacío 
                 //de la lista sea menor que el buscado
                 while (aux.getNext() != null
-                        && aux.getNext().getVehiculo().getPlaca() != placa) {
+                        && !aux.getNext().getVehiculo().getPlaca().equals(placa)) {
                     aux = aux.getNext();
+                    System.out.println("Entro al while");
                 }
                 //avanzo en la lista
 
                 // si el que le sigue es mayor entonces para el ciclo 
                 //y se ejecuta lo siguiente
                 if (aux.getNext() != null
-                        && aux.getNext().getVehiculo().getPlaca() == placa) {
+              && aux.getNext().getVehiculo().getPlaca().equals(placa)) {
                     //si el id es igual al del parametro...
-
-                    aux.setNext(aux.getNext().getNext());
-                    aux.getNext().getNext().setAtras(aux);
+                    if(aux.getNext().getNext() == null){
+                        aux.setNext(null);
+                        System.out.println("quitar el ultimo");
+          
+                    }else{
+                        System.out.println("quitar el del medio");
+                        aux.setNext(aux.getNext().getNext());
+                        aux.getNext().getNext().setAtras(aux);
+                    }
                     //y en este ultimo paso lo que hacemos es cambiar referencias
                 }
             }
         }
 
     }
-
+    
     public void mostrarVehiculos() {
         Nodo2 aux = cabeza;
         String output = "";
@@ -134,6 +144,27 @@ public class Lista {
                     + " Estado: " + aux.getVehiculo().getEstado()+ " | "+ "\n";
             aux = aux.getNext();
         }
-        JOptionPane.showMessageDialog(null, output);}
+        JOptionPane.showMessageDialog(null, output);
     }
+    
+    public boolean existe(String placa) {
+        boolean exist = false;
+        //verificar si la lista esta vacia
+        if (cabeza != null) {
+            //sino, se crea el nodo temporal para recorrer la lista
+            Nodo2 aux = cabeza;
+            //ingresa a un ciclo mientras el nodo no este null y el
+            //id del nodo sea menor que el parametro
+            while (aux != null && !aux.getVehiculo().getPlaca().equals(placa) ) {
+                aux = aux.getNext();
+            }
+            //almacenar true dentro de la variable si encontro el nodo
+            exist = (aux != null && aux.getVehiculo().getPlaca().equals(placa));
+    }
+        return exist;
+  }
+}
+    
+
+
 

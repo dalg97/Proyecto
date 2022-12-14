@@ -135,6 +135,11 @@ public class Principal extends javax.swing.JFrame {
         MenuVehiculos.add(ModificarVehiculo);
 
         EliminarVehiculo.setText(bundle.getString("Principal.EliminarVehiculo.text_1")); // NOI18N
+        EliminarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarVehiculoActionPerformed(evt);
+            }
+        });
         MenuVehiculos.add(EliminarVehiculo);
 
         jMenuBar9.add(MenuVehiculos);
@@ -275,6 +280,19 @@ public class Principal extends javax.swing.JFrame {
     private void CatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CatalogoActionPerformed
         vehicle.milista.mostrarVehiculos();
     }//GEN-LAST:event_CatalogoActionPerformed
+
+    private void EliminarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarVehiculoActionPerformed
+        String placa = JOptionPane.showInputDialog(
+                null, "Ingrese numero de placa: ");
+        if(vehicle.milista.existe(placa)){
+            vehicle.milista.eliminar(placa);
+            JOptionPane.showMessageDialog(null,"Vehiculo fue"
+                + "Eliminado exitosamente");
+        }else {
+            JOptionPane.showMessageDialog(null,"Vehiculo no"
+                    + "registrado");
+        }
+    }//GEN-LAST:event_EliminarVehiculoActionPerformed
     
     
     /**
