@@ -33,7 +33,7 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Limpiar = new javax.swing.JButton();
         BT_Guardar = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
         ExtraArranque = new javax.swing.JCheckBox();
         ExtraCargador = new javax.swing.JCheckBox();
         ExtraGPS = new javax.swing.JCheckBox();
@@ -94,13 +94,13 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         });
         jPanel1.add(BT_Guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, -1));
 
-        jButton3.setText("Salir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                SalirActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, -1, -1));
+        jPanel1.add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, -1, -1));
 
         ExtraArranque.setForeground(new java.awt.Color(0, 0, 0));
         ExtraArranque.setText("Arranque sin llave");
@@ -358,10 +358,10 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         EstadoVehiculo.setText(null);
     }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SalirActionPerformed
 
 
     private void BT_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_GuardarActionPerformed
@@ -470,8 +470,8 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private javax.swing.JTextField PrecioAlquilerVehiculo;
     private javax.swing.JMenuItem RegistrarCliente;
     private javax.swing.JMenuItem RegistrarVehiculo;
+    private javax.swing.JButton Salir;
     private javax.swing.JMenuItem SolicitarAlquiler;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

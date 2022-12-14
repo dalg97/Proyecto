@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author danny
@@ -30,8 +32,8 @@ public class EliminarVehiculo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         PlacaVehiculo = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Eliminar = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar9 = new javax.swing.JMenuBar();
         MenuClientes = new javax.swing.JMenu();
@@ -68,18 +70,23 @@ public class EliminarVehiculo extends javax.swing.JFrame {
         });
         jPanel1.add(PlacaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 60, -1));
 
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Eliminar Vehiculo");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
-
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Salir");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Eliminar.setForeground(new java.awt.Color(255, 255, 255));
+        Eliminar.setText("Eliminar Vehiculo");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                EliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+        jPanel1.add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        Salir.setForeground(new java.awt.Color(255, 255, 255));
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/EliminarVehiculo.jpeg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 480));
@@ -161,6 +168,11 @@ public class EliminarVehiculo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void limpiarPlaca() {
+        //Limpiar campo Placa
+        PlacaVehiculo.setText(null);
+    }
+
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
 
     }//GEN-LAST:event_RegistrarClienteActionPerformed
@@ -189,10 +201,21 @@ public class EliminarVehiculo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PlacaVehiculoActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SalirActionPerformed
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        // TODO add your handling code here:
+        String Placa = PlacaVehiculo.getText();
+        {
+
+        }
+        JOptionPane.showMessageDialog(null, "Vehiculo fue Eliminado "
+                + "exitosamente");
+        limpiarPlaca();
+    }//GEN-LAST:event_EliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,6 +254,7 @@ public class EliminarVehiculo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem DevolucionVehiculo;
+    private javax.swing.JButton Eliminar;
     private javax.swing.JMenuItem EliminarCliente;
     private javax.swing.JMenuItem EliminarVehiculo;
     private javax.swing.JMenu MenuAlquiler;
@@ -241,9 +265,8 @@ public class EliminarVehiculo extends javax.swing.JFrame {
     private javax.swing.JTextField PlacaVehiculo;
     private javax.swing.JMenuItem RegistrarCliente;
     private javax.swing.JMenuItem RegistrarVehiculo;
+    private javax.swing.JButton Salir;
     private javax.swing.JMenuItem SolicitarAlquiler;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
