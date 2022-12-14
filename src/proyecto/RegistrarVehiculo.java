@@ -142,8 +142,6 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
         jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
         jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
-
-        PrecioAlquilerVehiculo.setText("45000");
         jPanel1.add(PrecioAlquilerVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, -1, -1));
 
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
@@ -362,11 +360,11 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         String combustible = CombustibleVehiculo.getText();
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
+        String extras = ExtraArranque.getText();
         String estado = EstadoVehiculo.getText();
-        
-        {
-                        
-        }
+
+        milista.insertar(new Vehiculo(Placa, marca, modelo, anio, Color, cilidrada, combustible, pasajeros, precio, extras, estado));
+
         JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
                 + "exitosamente");
         limpiarVehiculos();
