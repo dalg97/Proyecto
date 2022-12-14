@@ -156,17 +156,38 @@ public class Lista {
             Nodo2 aux = cabeza;
             //ingresa a un ciclo mientras el nodo no este null y el
             //id del nodo sea menor que el parametro
-            while (aux != null && !aux.getVehiculo().getPlaca().equals(placa) ) {
+            while (aux != null && !aux.getVehiculo().getPlaca().equals
+                (placa) ) {
                 aux = aux.getNext();
             }
             //almacenar true dentro de la variable si encontro el nodo
-            exist = (aux != null && aux.getVehiculo().getPlaca().equals(placa));
+            exist = (aux != null && aux.getVehiculo().getPlaca().equals
+        (   placa));
     }
         return exist;
   }
     public String[] getArray() {
         return array;
 }
+    public void modificarV(String Placa, String marca, String modelo, int anio,
+            String color, int cilindrada, String combustible, int pasajeros,
+            int precio, String Estado, String Extras){
+        Nodo2 aux=cabeza;
+        if(Placa == aux.getVehiculo().getPlaca()){
+            aux.getVehiculo().setPlaca(Placa);
+            aux.getVehiculo().setColor(color);
+            aux.getVehiculo().setExtras(Extras);
+            aux.getVehiculo().setEstado(Estado);
+            aux.getVehiculo().setMarca(marca);
+            aux.getVehiculo().setCombustible(combustible);
+            aux.getVehiculo().setPasajeros(pasajeros);
+            aux.getVehiculo().setCilidrada(cilindrada);
+            aux.getVehiculo().setPrecio(precio);
+            aux.getVehiculo().setAnio(anio);
+            aux.getVehiculo().setModelo(modelo);
+            
+        }
+    }
     public void getAtributos(String placa){
         Nodo2 aux = cabeza;
         // Bandera para verificar si exist el elemento a search.
@@ -193,9 +214,17 @@ public class Lista {
                 // Avanza al siguiente node.
                 aux = aux.getNext();
             }
+    
+            
         }
-}
-}
+            
+        }
+     
+        }
+    
+        
+
+
     
 
 
