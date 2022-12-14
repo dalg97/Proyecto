@@ -12,17 +12,10 @@ public class ModificarCliente extends javax.swing.JFrame {
      */
     public ModificarCliente() {
         initComponents();
-        setTitle(" Modificar Cliente");
-        //Clientes client = new Clientes();
-        //Pila mipila = new Pila();
-        
+        setTitle(" Modificar Cliente");    
     }
     Clientes client = new Clientes();
-//esta función limpia todos los espaciós para que al ingresar una cedula nuevo
-    //en la parte de los textos no se mantenga la información del cliente
-    //pasado
-    
-    
+
     public void limpiar() {
         nameField.setText("");
         idField.setText("");
@@ -35,21 +28,7 @@ public class ModificarCliente extends javax.swing.JFrame {
     //ya que se pide que sea el unico dato que no puede modificarse
     public void bloquear() {
         idField.setEditable(false);
-    }
-
-        
-//    public boolean eliminar(long id) {
-//        boolean eliminado = false;
-//        for (int i=0; i<Main.mipila.size(); i++) {
-//            if (Main.mipila.get(i).getCedula() == id) {
-//                Main.mipila.remove(i);
-//                eliminado = true;
-//            }
-//        }
-//        
-//        return eliminado;
-//    }
-    
+    }    
     public void guardar(){
         
     }
@@ -65,7 +44,6 @@ public class ModificarCliente extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         searchField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        searchBtn1 = new javax.swing.JButton();
         searchBtn2 = new javax.swing.JButton();
         searchBtn3 = new javax.swing.JButton();
         searchBtn4 = new javax.swing.JButton();
@@ -110,16 +88,6 @@ public class ModificarCliente extends javax.swing.JFrame {
         });
 
         jLabel1.setText("Encuentra por identificacion");
-
-        searchBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/trash-can.png"))); // NOI18N
-        searchBtn1.setToolTipText("Consultar usuario");
-        searchBtn1.setBorder(null);
-        searchBtn1.setBorderPainted(false);
-        searchBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchBtn1ActionPerformed(evt);
-            }
-        });
 
         searchBtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/save.png"))); // NOI18N
         searchBtn2.setToolTipText("Consultar usuario");
@@ -180,15 +148,13 @@ public class ModificarCliente extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(203, Short.MAX_VALUE)
-                .addComponent(searchBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
+                        .addContainerGap(430, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(53, 53, 53))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addContainerGap(404, Short.MAX_VALUE)
                         .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)))
                 .addComponent(searchBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -226,7 +192,6 @@ public class ModificarCliente extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(searchBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -261,21 +226,6 @@ public class ModificarCliente extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void searchBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn1ActionPerformed
-//        if (searchField.getText().isEmpty()) {
-//            JOptionPane.showMessageDialog(null, "Por favor "
-//                    + "ingrese una identificacion para eliminar");
-//        } else {
-//            if (eliminar(Long.parseLong(searchField.getText()))) {
-//                JOptionPane.showMessageDialog(null, 
-//                        "Cliente eliminado");
-//            } else {
-//                JOptionPane.showMessageDialog(null,
-//                        "No se encontro a este cliente");
-//            }
-//        }
-    }//GEN-LAST:event_searchBtn1ActionPerformed
 
     private void searchBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn2ActionPerformed
         
@@ -391,7 +341,6 @@ public class ModificarCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nameField;
-    private javax.swing.JButton searchBtn1;
     private javax.swing.JButton searchBtn2;
     private javax.swing.JButton searchBtn3;
     private javax.swing.JButton searchBtn4;
