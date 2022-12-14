@@ -86,60 +86,60 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Modificar Vehiculo");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 370, 60));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 370, 60));
 
         jLabel3.setText("Placa:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel4.setText("Marca:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
-        jPanel1.add(MarcaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 90, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+        jPanel1.add(MarcaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 90, -1));
 
         jLabel5.setText("Modelo:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
-        jPanel1.add(ModeloVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 90, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel1.add(ModeloVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 90, -1));
 
         jLabel6.setText("Año:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
-        jPanel1.add(AñoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 60, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+        jPanel1.add(AñoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 60, -1));
 
         jLabel7.setText("Color:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         ColorVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ColorVehiculoActionPerformed(evt);
             }
         });
-        jPanel1.add(ColorVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
+        jPanel1.add(ColorVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
 
         jLabel8.setText("Cilindraje:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, -1));
-        jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
+        jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, -1, -1));
 
         jLabel9.setText("Combustible:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
         CombustibleVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CombustibleVehiculoActionPerformed(evt);
             }
         });
-        jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
-        jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
-        jPanel1.add(PrecioAlquilerVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, -1, -1));
+        jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, -1, -1));
+        jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
+        jPanel1.add(PrecioAlquilerVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, -1, -1));
 
         jLabel10.setText("Cant.Pasajeros:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         jLabel11.setText("Precio Alquiler Diario:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
         jLabel12.setText("Extras:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, -1));
 
         jLabel13.setText("Estado:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
 
         ExtraArranque.setText("Arranque sin llave");
         ExtraArranque.addActionListener(new java.awt.event.ActionListener() {
@@ -147,16 +147,16 @@ public class ModificarVehiculo extends javax.swing.JFrame {
                 ExtraArranqueActionPerformed(evt);
             }
         });
-        jPanel1.add(ExtraArranque, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, -1, -1));
+        jPanel1.add(ExtraArranque, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
 
         ExtraCargador.setText("Cargador Inalambrico");
-        jPanel1.add(ExtraCargador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, -1, -1));
+        jPanel1.add(ExtraCargador, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, -1));
 
         ExtraGPS.setText("GPS - Navegador en Tiempo Real");
-        jPanel1.add(ExtraGPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, -1, -1));
+        jPanel1.add(ExtraGPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
 
         ExtraSenReversa.setText("Sensores + Camara Reversa");
-        jPanel1.add(ExtraSenReversa, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
+        jPanel1.add(ExtraSenReversa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, -1, -1));
 
         Limpiar.setText("Limpiar");
         Limpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +164,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
                 LimpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(Limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 410, -1, -1));
+        jPanel1.add(Limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
 
         BT_Actualizar.setText("Actualizar");
         BT_Actualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
                 BT_ActualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(BT_Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
+        jPanel1.add(BT_Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, -1, -1));
 
         jButton3.setText("Salir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -180,8 +180,8 @@ public class ModificarVehiculo extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, -1, -1));
-        jPanel1.add(EstadoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 160, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
+        jPanel1.add(EstadoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 160, -1));
 
         searchField.setToolTipText("Ingrese la identificacion");
         searchField.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +189,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
                 searchFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
+        jPanel1.add(searchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
 
         searchBtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/buscar.png"))); // NOI18N
         searchBtn3.setToolTipText("Consultar usuario");
@@ -200,7 +200,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
                 searchBtn3ActionPerformed(evt);
             }
         });
-        jPanel1.add(searchBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 30, 30));
+        jPanel1.add(searchBtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 30, 30));
 
         MenuClientes.setText("Clientes");
 
@@ -394,6 +394,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
             CantPasajerosVehiculo.setText(array[6]);
             PrecioAlquilerVehiculo.setText(array[8]);
             EstadoVehiculo.setText(array[3]);
+            limpiarVehiculos();
         }
             
         
