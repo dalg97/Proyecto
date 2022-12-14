@@ -39,13 +39,13 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         ExtraCargador = new javax.swing.JCheckBox();
         ExtraGPS = new javax.swing.JCheckBox();
         ExtraSenReversa = new javax.swing.JCheckBox();
-        CombustibleVehiculo = new javax.swing.JTextField();
+        PlacaVehiculo = new javax.swing.JTextField();
         MarcaVehiculo = new javax.swing.JTextField();
         ModeloVehiculo = new javax.swing.JTextField();
         AnioVehiculo = new javax.swing.JTextField();
         ColorVehiculo = new javax.swing.JTextField();
         CCVehiculo = new javax.swing.JTextField();
-        EstadoVehiculo = new javax.swing.JTextField();
+        CombustibleVehiculo = new javax.swing.JTextField();
         CantPasajerosVehiculo = new javax.swing.JTextField();
         PrecioAlquilerVehiculo = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
@@ -58,9 +58,8 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        PlacaVehiculo = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar9 = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -103,76 +102,61 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jPanel1.add(ExtraCargador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, -1, -1));
 
         ExtraGPS.setText("GPS - Navegador en Tiempo Real");
-        ExtraGPS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExtraGPSActionPerformed(evt);
-            }
-        });
         jPanel1.add(ExtraGPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, -1, -1));
 
         ExtraSenReversa.setText("Sensores + Camara Reversa");
         jPanel1.add(ExtraSenReversa, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
-
-        CombustibleVehiculo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CombustibleVehiculoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 80, -1));
-        jPanel1.add(MarcaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 90, -1));
-        jPanel1.add(ModeloVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 90, -1));
-        jPanel1.add(AnioVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 90, -1));
-
-        ColorVehiculo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ColorVehiculoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ColorVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 90, -1));
-        jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 90, -1));
-        jPanel1.add(EstadoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 90, -1));
-        jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 90, 80, -1));
-        jPanel1.add(PrecioAlquilerVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, 80, -1));
-
-        jLabel12.setText("Extras:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, -1));
-
-        jLabel11.setText("Precio Alquiler Diario:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, -1));
-
-        jLabel10.setText("Cant.Pasajeros:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, -1, -1));
-
-        jLabel9.setText("Combustible:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, -1, -1));
-
-        jLabel8.setText("Cilindraje:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
-
-        jLabel7.setText("Color:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, -1, -1));
-
-        jLabel6.setText("Año:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, -1, -1));
-
-        jLabel5.setText("Modelo:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, -1));
-
-        jLabel4.setText("Marca:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, -1, -1));
-
-        jLabel3.setText("Estado");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
 
         PlacaVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PlacaVehiculoActionPerformed(evt);
             }
         });
-        jPanel1.add(PlacaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 90, -1));
+        jPanel1.add(PlacaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 60, -1));
+        jPanel1.add(MarcaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 90, -1));
+        jPanel1.add(ModeloVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 90, -1));
+        jPanel1.add(AnioVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 60, -1));
 
-        jLabel13.setText("Placa:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, -1, -1));
+        ColorVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ColorVehiculoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ColorVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
+        jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+        jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
+        jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 100, -1, -1));
+        jPanel1.add(PrecioAlquilerVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, -1, -1));
+
+        jLabel12.setText("Extras:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, -1, -1));
+
+        jLabel11.setText("Precio Alquiler Diario:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, -1, -1));
+
+        jLabel10.setText("Cant.Pasajeros:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, -1, -1));
+
+        jLabel9.setText("Combustible:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, -1, -1));
+
+        jLabel8.setText("Cilindraje:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, -1));
+
+        jLabel7.setText("Color:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
+
+        jLabel6.setText("Año:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
+
+        jLabel5.setText("Modelo:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+
+        jLabel4.setText("Marca:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, -1, -1));
+
+        jLabel3.setText("Placa:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -180,29 +164,29 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 370, 60));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Car Rental.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 480));
+
         setJMenuBar(jMenuBar9);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CombustibleVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CombustibleVehiculoActionPerformed
+    private void PlacaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlacaVehiculoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CombustibleVehiculoActionPerformed
+    }//GEN-LAST:event_PlacaVehiculoActionPerformed
 
     private void ColorVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ColorVehiculoActionPerformed
         // TODO add your handling code here:
@@ -210,25 +194,28 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
 
     private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
         // TODO add your handling code here:
-        limpiarVehiculos();
+        PlacaVehiculo.setText(null);
+        MarcaVehiculo.setText(null);
+        ModeloVehiculo.setText(null);
+        AnioVehiculo.setText(null);
+        ColorVehiculo.setText(null);
+        CCVehiculo.setText(null);
+        CombustibleVehiculo.setText(null);
+        CantPasajerosVehiculo.setText(null);
+        PrecioAlquilerVehiculo.setText(null);
     }//GEN-LAST:event_LimpiarActionPerformed
 
     private void limpiarVehiculos() {
         //Limpiar todos los campos
-       PlacaVehiculo.setText("");
-       CombustibleVehiculo.setText("");
-        MarcaVehiculo.setText("");
-        ModeloVehiculo.setText("");
-        AnioVehiculo.setText("");
-        ColorVehiculo.setText("");
-        CCVehiculo.setText("");
-        EstadoVehiculo.setText("");
-        CantPasajerosVehiculo.setText("");
-        PrecioAlquilerVehiculo.setText("");
-        ExtraArranque.setSelected(false);
-        ExtraGPS.setSelected(false);
-        ExtraCargador.setSelected(false);
-        ExtraSenReversa.setSelected(false);
+        PlacaVehiculo.setText(null);
+        MarcaVehiculo.setText(null);
+        ModeloVehiculo.setText(null);
+        AnioVehiculo.setText(null);
+        ColorVehiculo.setText(null);
+        CCVehiculo.setText(null);
+        CombustibleVehiculo.setText(null);
+        CantPasajerosVehiculo.setText(null);
+        PrecioAlquilerVehiculo.setText(null);
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -245,33 +232,12 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         String modelo = ModeloVehiculo.getText();
         int anio = Integer.parseInt(AnioVehiculo.getText());
         String Color = ColorVehiculo.getText();
-        int cilindrada = Integer.parseInt(CCVehiculo.getText());
+        int cilidrada = Integer.parseInt(CCVehiculo.getText());
         String combustible = CombustibleVehiculo.getText();
-        String estado = EstadoVehiculo.getText();
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
         
-        if(ExtraArranque.isSelected()){
-            String extras = "Arranque sin Llave"; 
-            milista.insertar(new Vehiculo(Placa,marca,modelo,anio,
-                    Color,cilindrada,combustible,pasajeros,
-                    precio,extras,estado));
-        }else if(ExtraCargador.isSelected()){
-            String extras = "Cargador Inalambrico"; 
-            milista.insertar(new Vehiculo(Placa,marca,modelo,anio,
-                    Color,cilindrada,combustible,pasajeros,
-                    precio,extras,estado));
-        }else if(ExtraGPS.isSelected()){ 
-            String extras = "GPS - Navegador en Tiempo Real"; 
-            milista.insertar(new Vehiculo(Placa,marca,modelo,anio,
-                    Color,cilindrada,combustible,pasajeros,
-                    precio,extras,estado));
-        }else{
-           String extras = "Sensores + Camara Reversa"; 
-            milista.insertar(new Vehiculo(Placa,marca,modelo,anio,
-                    Color,cilindrada,combustible,pasajeros,
-                    precio,extras,estado)); 
-        }
+        
         JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
                 + "exitosamente");
         limpiarVehiculos();
@@ -282,14 +248,6 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private void ExtraArranqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExtraArranqueActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ExtraArranqueActionPerformed
-
-    private void PlacaVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlacaVehiculoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PlacaVehiculoActionPerformed
-
-    private void ExtraGPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExtraGPSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ExtraGPSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,7 +300,6 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private javax.swing.JTextField CantPasajerosVehiculo;
     private javax.swing.JTextField ColorVehiculo;
     private javax.swing.JTextField CombustibleVehiculo;
-    private javax.swing.JTextField EstadoVehiculo;
     private javax.swing.JCheckBox ExtraArranque;
     private javax.swing.JCheckBox ExtraCargador;
     private javax.swing.JCheckBox ExtraGPS;
@@ -353,10 +310,10 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
     private javax.swing.JTextField PlacaVehiculo;
     private javax.swing.JTextField PrecioAlquilerVehiculo;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

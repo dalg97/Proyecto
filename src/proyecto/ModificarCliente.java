@@ -29,9 +29,7 @@ public class ModificarCliente extends javax.swing.JFrame {
     public void bloquear() {
         idField.setEditable(false);
     }    
-    public void guardar(){
-        
-    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

@@ -12,6 +12,7 @@ public class Lista {
 
     private Nodo2 cabeza;
     //private Nodo2 ultimo;
+    private String array [] = new String [10];
 
     public void insertar(Vehiculo vehiculo) {
         if (cabeza == null) {
@@ -155,15 +156,75 @@ public class Lista {
             Nodo2 aux = cabeza;
             //ingresa a un ciclo mientras el nodo no este null y el
             //id del nodo sea menor que el parametro
-            while (aux != null && !aux.getVehiculo().getPlaca().equals(placa) ) {
+            while (aux != null && !aux.getVehiculo().getPlaca().equals
+                (placa) ) {
                 aux = aux.getNext();
             }
             //almacenar true dentro de la variable si encontro el nodo
-            exist = (aux != null && aux.getVehiculo().getPlaca().equals(placa));
+            exist = (aux != null && aux.getVehiculo().getPlaca().equals
+        (   placa));
     }
         return exist;
   }
+    public String[] getArray() {
+        return array;
 }
+    public void modificarV(String Placa, String marca, String modelo, int anio,
+            String color, int cilindrada, String combustible, int pasajeros,
+            int precio, String Estado, String Extras){
+        Nodo2 aux=cabeza;
+        if(Placa == aux.getVehiculo().getPlaca()){
+            aux.getVehiculo().setPlaca(Placa);
+            aux.getVehiculo().setColor(color);
+            aux.getVehiculo().setExtras(Extras);
+            aux.getVehiculo().setEstado(Estado);
+            aux.getVehiculo().setMarca(marca);
+            aux.getVehiculo().setCombustible(combustible);
+            aux.getVehiculo().setPasajeros(pasajeros);
+            aux.getVehiculo().setCilidrada(cilindrada);
+            aux.getVehiculo().setPrecio(precio);
+            aux.getVehiculo().setAnio(anio);
+            aux.getVehiculo().setModelo(modelo);
+            
+        }
+    }
+    public void getAtributos(String placa){
+        Nodo2 aux = cabeza;
+        // Bandera para verificar si exist el elemento a search.
+        // Recorre la pila hasta llegar encontrar el node o llegar al final
+        // de la pila.
+        while (aux != null) {
+            // Compara si el value del node es igual que al de reference.
+            if (placa == aux.getVehiculo().getPlaca()) {
+                // Cambia el value de la bandera.
+                array[0] = aux.getVehiculo().getPlaca();
+                array[1] = aux.getVehiculo().getColor();
+                array[2] = aux.getVehiculo().getExtras();
+                array[3] = aux.getVehiculo().getEstado();
+                array[4] = aux.getVehiculo().getMarca();
+                array[5] = aux.getVehiculo().getCombustible();
+                array[6] = (String.valueOf(aux.getVehiculo().getPasajeros()));
+                array[7] = (String.valueOf(aux.getVehiculo().getCilidrada()));
+                array[8] = (String.valueOf(aux.getVehiculo().getPrecio()));
+                array[9] = (String.valueOf(aux.getVehiculo().getAnio()));
+                array[10] = (aux.getVehiculo().getModelo());
+                                
+                aux = null;
+            } else {
+                // Avanza al siguiente node.
+                aux = aux.getNext();
+            }
+    
+            
+        }
+            
+        }
+     
+        }
+    
+        
+
+
     
 
 
