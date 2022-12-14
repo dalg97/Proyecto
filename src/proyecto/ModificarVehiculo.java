@@ -250,6 +250,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
 
     private void BT_ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BT_ActualizarActionPerformed
         // TODO add your handling code here:
+        
         //Guardar el Vehiculo a la Lista
         String Placa = searchField.getText();
         String marca = MarcaVehiculo.getText();
