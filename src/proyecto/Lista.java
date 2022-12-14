@@ -14,16 +14,16 @@ import javax.swing.JOptionPane;
 public class Lista {
 
     private Nodo2 cabeza;
-    private Nodo2 ultimo;
+    //private Nodo2 ultimo;
 
     public void insertar(Vehiculo vehiculo) {
         if (cabeza == null) {
             //si la lista esta vacia, se inserta como la cabeza
             cabeza = new Nodo2(vehiculo);
-            ultimo = cabeza;
+           // ultimo = cabeza;
             //si no esta vacia, verifica si el id es menor al id de la cabeza
-        } else if (vehiculo.getAnio() < cabeza.getVehiculo().getAnio()) {
-            //si es menor, crea el nodo temporal y lo asigna a la derecha
+        } else if (vehiculo.getAnio() > cabeza.getVehiculo().getAnio()) {
+            //si es mayor, crea el nodo temporal y lo asigna a la izquierda
             //de la cabeza
             Nodo2 aux = new Nodo2(vehiculo);
             aux.setNext(cabeza);
@@ -34,6 +34,9 @@ public class Lista {
             //nodo
         } else if (cabeza.getNext() == null) {
             Nodo2 aux = new Nodo2(vehiculo);
+            //aux.setNext(cabeza.getNext());
+            //aux.setAtras(cabeza);
+           // cabeza.getAtras().setAtras(aux);
             cabeza.setNext(aux);
             aux.setAtras(cabeza);
         } else {
@@ -51,12 +54,10 @@ public class Lista {
             //se crea un nodo temporal y se asinga como nodo siguiente.
             Nodo2 temp = new Nodo2(vehiculo);
             temp.setNext(aux.getNext());
+            aux.getNext().setAtras(temp);
             aux.setNext(temp);
             temp.setAtras(aux);
-            temp.getNext().setAtras(temp); //nuevo
         }
-        ultimo.setNext(cabeza);
-        cabeza.setAtras(ultimo);
     }
 
     public void modificar(Vehiculo vehiculo) {
@@ -120,38 +121,19 @@ public class Lista {
         String output = "";
         // Recorre la lista hasta el ultimo nodo
         while (aux != null) {
+            System.out.println(aux.getVehiculo().getPlaca());
             output += " Placa: " + aux.getVehiculo().getPlaca() + " | "
                     + " Marca: " + aux.getVehiculo().getMarca() + " | "
                     + " Modelo: " + aux.getVehiculo().getModelo() + " | "
                     + " Año: " + aux.getVehiculo().getAnio() + " | "
                     + " Color: " + aux.getVehiculo().getColor() + " | "
-                    + " Cilindrada: " + aux.getVehiculo().getCilidrada() + " | "
-                    + " Combustible: " + aux.getVehiculo().getCombustible() + " | "
-                    + " Cant.Pasajeros: " + aux.getVehiculo().getPasajeros() + " | "
+                    + " Cilindrada: " + aux.getVehiculo().getCilidrada()+" | "
+                    + " Combustible: " + aux.getVehiculo().getCombustible()+" | "
+                    + " Cant.Pasajeros: " + aux.getVehiculo().getPasajeros()+" | "
                     + " Precio: " + aux.getVehiculo().getPrecio() + " | "
                     + " Estado: " + aux.getVehiculo().getEstado()+ " | "+ "\n";
             aux = aux.getNext();
         }
-        JOptionPane.showMessageDialog(null, output);
-        {
-
-        }
+        JOptionPane.showMessageDialog(null, output);}
     }
 
-    @Override
-    public String toString() {
-        Nodo2 aux = cabeza;
-        String s = "";
-        if (aux != null) {
-            s += aux + ", ";
-            aux = aux.getNext();
-            while (aux != cabeza) {
-                s += aux + ", ";
-                aux = aux.getNext();
-            }
-        } else {
-            s += "vacia";
-        }
-        return s;
-    }
-}

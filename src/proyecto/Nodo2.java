@@ -17,7 +17,7 @@ public class Nodo2 {
 
     @Override
     public String toString() {
-        return "Nodo2{" + "vehiculo=" + vehiculo + '}';
+        return "Carro{" + "vehiculo=" + vehiculo.getMarca() + '}';
     }
 
     //Setters and Getters
