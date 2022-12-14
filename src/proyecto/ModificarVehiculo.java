@@ -377,9 +377,9 @@ public class ModificarVehiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_searchFieldActionPerformed
 
     private void searchBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn3ActionPerformed
-        int Placa = Integer.parseInt(searchField.getText());
-        if(rvehiculo.milista.existe("")){
-            rvehiculo.milista.getAtributos("");
+        String Placa = (String.valueOf(searchField.getText()));
+        if(rvehiculo.milista.existe(Placa)){
+            rvehiculo.milista.getAtributos(Placa);
             System.out.println("entro");
             String [] array = rvehiculo.milista.getArray();
             System.out.println(array);
