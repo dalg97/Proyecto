@@ -266,22 +266,22 @@ public class ModificarVehiculo extends javax.swing.JFrame {
             String extra = "Arranque sin llave";
             vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
                 cilidrada, combustible, pasajeros, precio, 
-                estado, estado);
+                estado, extra);
         }else if(ExtraCargador.isSelected()){
             String extra = "Cargador Inalambrico";
             vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
                 cilidrada, combustible, pasajeros, precio, 
-                estado, estado);
+                estado, extra);
         }else if(ExtraGPS.isSelected()){
             String extra = "GPS - Navegador en Tiempo Real";
             vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
                 cilidrada, combustible, pasajeros, precio, 
-                estado, estado);
+                estado, extra);
         }else {
             String extra = "Sensores + Camara Reversa";
             vehiculo.milista.modificarV(Placa, marca, modelo, anio, Color, 
                 cilidrada, combustible, pasajeros, precio, 
-                estado, estado);
+                estado, extra);
         }
 
        JOptionPane.showMessageDialog(null,"Vehiculo fue Modificado"
