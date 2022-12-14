@@ -353,7 +353,10 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
         String estado = EstadoVehiculo.getText();
-        
+        milista.modificarV(Placa, marca, modelo, anio, Color, 
+                cilidrada, combustible, pasajeros, precio, 
+                estado, estado);
+
         {
 
         }

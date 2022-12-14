@@ -16,7 +16,7 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         setTitle("RENT A CAR MAD");
         setExtendedState(MAXIMIZED_BOTH);
-        setResizable(false);
+        setResizable(true);
     }
 
     /**
