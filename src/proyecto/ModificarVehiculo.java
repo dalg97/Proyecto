@@ -353,9 +353,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         int pasajeros = Integer.parseInt(CantPasajerosVehiculo.getText());
         int precio = Integer.parseInt(PrecioAlquilerVehiculo.getText());
         String estado = EstadoVehiculo.getText();
-        //rvehiculo.milista.modificar();
         
-
         {
 
         }
@@ -381,7 +379,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
     private void searchBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn3ActionPerformed
         int Placa = Integer.parseInt(searchField.getText());
         if(rvehiculo.milista.existe("")){
-            //rvehiculo.milista.getAtributos(placa);
+            rvehiculo.milista.getAtributos("");
             System.out.println("entro");
             String [] array = rvehiculo.milista.getArray();
             System.out.println(array);
