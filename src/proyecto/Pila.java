@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 public class Pila {
     private Nodo1 cima;
     private int largo;
+    private String array [] = new String [4];
     
     public boolean Vacia(){ return cima == null;}
     
@@ -83,6 +84,11 @@ public class Pila {
             System.out.println("Largo: "+largo);
         }
     }
+
+    public String[] getArray() {
+        return array;
+    }
+    
     
     public boolean search(int Cedula) {
         // Crea una copia de la pila.
@@ -104,22 +110,42 @@ public class Pila {
         // Retorna el value de la bandera.
         return exist;
     }
-    
-    public void modificar(int Cedula) {
-        // Crea una copia de la pila.
+    public void getAtributos(int Cedula){
         Nodo1 aux = cima;
         // Bandera para verificar si exist el elemento a search.
-        boolean exist = false;
         // Recorre la pila hasta llegar encontrar el node o llegar al final
         // de la pila.
-        while (exist != true && aux != null) {
+        while (aux != null) {
             // Compara si el value del node es igual que al de reference.
             if (Cedula == aux.getCliente().getCedula()) {
                 // Cambia el value de la bandera.
-                aux.getCliente().setCategoria("");
-                aux.getCliente().setCorreo("");
-                aux.getCliente().setFecha("");
-                aux.getCliente().setNombre("");
+                array[0] = aux.getCliente().getCategoria();
+                array[1] = aux.getCliente().getCorreo();
+                array[2] = aux.getCliente().getFecha();
+                array[3] = aux.getCliente().getNombre();
+                aux = null;
+            } else {
+                // Avanza al siguiente node.
+                aux = aux.getSiguiente();
+            }
+        }
+    }
+    public void modificar(int Cedula,String Categoria,String Fecha,String Correo,
+            String Nombre) {
+        // Crea una copia de la pila.
+        Nodo1 aux = cima;
+        // Bandera para verificar si exist el elemento a search.
+        // Recorre la pila hasta llegar encontrar el node o llegar al final
+        // de la pila.
+        while ( aux != null) {
+            // Compara si el value del node es igual que al de reference.
+            if (Cedula == aux.getCliente().getCedula()) {
+                // Cambia el value de la bandera.
+                aux.getCliente().setCategoria(Categoria);
+                aux.getCliente().setCorreo(Correo);
+                aux.getCliente().setFecha(Fecha);
+                aux.getCliente().setNombre(Nombre);
+                aux=null;
             } else {
                 // Avanza al siguiente node.
                 aux = aux.getSiguiente();
@@ -146,88 +172,22 @@ public class Pila {
         // Consulta si el value exist en la pila.
         if (search(Cedula)) {
             //Nodo1 aux = cima;
-            Nodo1 cimapPilaAux = null;
+            Nodo1 aux = cima;  
+            Nodo1 temp = aux;
             // Recorre la pila hasta el ultimo node.
-            while(Cedula != cima.getCliente().getCedula()){
-                System.out.println("cedula es diferente");
-                System.out.println("Cedula es: "+cima.getCliente().getCedula());
-                Nodo1 temp = cima;
-                //if(Cedula != cima.getCliente().getCedula()){
-                    if(cimapPilaAux == null){
-                    // Inicializa la pila auxiliar.
-                        cimapPilaAux = temp;
-                    }
-                // Caso contrario si la pila auxiliar ya contiene elementos
-                // los agrega al start.
-                    else{
-                        temp.setSiguiente(cimapPilaAux);
-                        cimapPilaAux = temp;
-                    }
-                //}
-                pop();
-                System.out.println("Removio el de la original");
-                //aux = aux.getSiguiente(); 
-            }
-            pop();
-            System.out.println("Removio el buscado");
-            while(cimapPilaAux != null){
-                System.out.println("Ingresan nodos a la pila original");
-                // Utiliza el metodo push para regresar los elementos a 
-                // la pila original.
-                push(cimapPilaAux.getCliente());
-                // Avansa al siguiente node de la pila auxiliar.
-                cimapPilaAux = cimapPilaAux.getSiguiente();
-            }
-            cimapPilaAux = null;
-        }
-        else{
-            System.out.println("El nodo indicado no existe");
-        }
-    }
-    public void popModificado1(int cedula){
-        // Consulta si el value exist en la pila.
-        if (search(cedula)) {
-            // Crea una pila auxiliar para guardar los valuees que se 
-            // vayan desapilando de la pila original.
-            Nodo1 cimapPilaAux = null;
-            // Recoore la pila hasta llegar al node que tenga el value
-            // igual que el de reference.
-            while(cima != null && cedula != cima.getCliente().getCedula()){
-                System.out.println("Cedula es: "+cima.getCliente().getCedula());
-                // Crea un node temporal para agregarlos a la pila auxiliar.
-                Nodo1 temp = cima;
-                // Ingresa el value al node temporal.
-                //temp.setValor(cima.getValor());
-                // Consulta si la pila auxiliar no a sido inicializada.
-                if(cimapPilaAux == null){
-                    // Inicializa la pila auxiliar.
-                    cimapPilaAux = temp;
+            while(aux != null){
+                if(Cedula == cima.getCliente().getCedula()){
+                    pop();
+                    aux = null;
+                }else if(Cedula == aux.getCliente().getCedula()){
+                    temp.setSiguiente(aux.getSiguiente());
+                    aux = null;
+                }else {
+                        temp=aux;
+                        aux=aux.getSiguiente();
                 }
-                // Caso contrario si la pila auxiliar ya contiene elementos
-                // los agrega al start.
-                else{
-                    temp.setSiguiente(cimapPilaAux);
-                    cimapPilaAux = temp;
-                }
-                // Elimina el node del tope de la pila hasta llegar al node
-                // que se desea eliminar.
-                pop();
-            }
-            // Elimina el node que coincide con el de reference.
-            pop();
-            // Regresa los valuees de la pila auxiliar a la pila original
-            // mientras la pila auxiliar tenga elementos.
-            while(cimapPilaAux != null){
-                // Utiliza el metodo push para regresar los elementos a 
-                // la pila original.
-                push(cimapPilaAux.getCliente());
-                // Avansa al siguiente node de la pila auxiliar.
-                cimapPilaAux = cimapPilaAux.getSiguiente();
-            }
-            // Libera la memoria utilizada por la pila auxiliar.
-            cimapPilaAux = null;
-        }
-        else{
+            }            
+        }else{
             System.out.println("El nodo indicado no existe");
         }
     }

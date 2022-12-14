@@ -51,14 +51,14 @@ public class Principal extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("proyecto/Bundle"); // NOI18N
-        ConsultaClientes.setText(bundle.getString("Principal.ConsultaClientes.text")); // NOI18N
+        ConsultaClientes.setText(bundle.getString("Principal.ConsultaClientes.text_1")); // NOI18N
         ConsultaClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConsultaClientesActionPerformed(evt);
             }
         });
 
-        ConsultaSolicitudes.setText(bundle.getString("Principal.ConsultaSolicitudes.text")); // NOI18N
+        ConsultaSolicitudes.setText(bundle.getString("Principal.ConsultaSolicitudes.text_1")); // NOI18N
         ConsultaSolicitudes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConsultaSolicitudesActionPerformed(evt);
@@ -67,18 +67,18 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel1.setText(bundle.getString("Principal.jLabel1.text")); // NOI18N
+        jLabel1.setText(bundle.getString("Principal.jLabel1.text_1")); // NOI18N
 
-        Catalogo.setText(bundle.getString("Principal.Catalogo.text")); // NOI18N
+        Catalogo.setText(bundle.getString("Principal.Catalogo.text_1")); // NOI18N
         Catalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CatalogoActionPerformed(evt);
             }
         });
 
-        jMenu1.setText(bundle.getString("Principal.jMenu1.text")); // NOI18N
+        jMenu1.setText(bundle.getString("Principal.jMenu1.text_1")); // NOI18N
 
-        Salir.setText(bundle.getString("Principal.Salir.text")); // NOI18N
+        Salir.setText(bundle.getString("Principal.Salir.text_1")); // NOI18N
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -88,9 +88,9 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar9.add(jMenu1);
 
-        MenuClientes.setText(bundle.getString("Principal.MenuClientes.text")); // NOI18N
+        MenuClientes.setText(bundle.getString("Principal.MenuClientes.text_1")); // NOI18N
 
-        RegistrarCliente.setText(bundle.getString("Principal.RegistrarCliente.text")); // NOI18N
+        RegistrarCliente.setText(bundle.getString("Principal.RegistrarCliente.text_1")); // NOI18N
         RegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarClienteActionPerformed(evt);
@@ -98,7 +98,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuClientes.add(RegistrarCliente);
 
-        ModificarCliente.setText(bundle.getString("Principal.ModificarCliente.text")); // NOI18N
+        ModificarCliente.setText(bundle.getString("Principal.ModificarCliente.text_1")); // NOI18N
         ModificarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarClienteActionPerformed(evt);
@@ -106,7 +106,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuClientes.add(ModificarCliente);
 
-        EliminarCliente.setText(bundle.getString("Principal.EliminarCliente.text")); // NOI18N
+        EliminarCliente.setText(bundle.getString("Principal.EliminarCliente.text_1")); // NOI18N
         EliminarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EliminarClienteActionPerformed(evt);
@@ -116,9 +116,9 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar9.add(MenuClientes);
 
-        MenuVehiculos.setText(bundle.getString("Principal.MenuVehiculos.text")); // NOI18N
+        MenuVehiculos.setText(bundle.getString("Principal.MenuVehiculos.text_1")); // NOI18N
 
-        RegistrarVehiculo.setText(bundle.getString("Principal.RegistrarVehiculo.text")); // NOI18N
+        RegistrarVehiculo.setText(bundle.getString("Principal.RegistrarVehiculo.text_1")); // NOI18N
         RegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarVehiculoActionPerformed(evt);
@@ -126,7 +126,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuVehiculos.add(RegistrarVehiculo);
 
-        ModificarVehiculo.setText(bundle.getString("Principal.ModificarVehiculo.text")); // NOI18N
+        ModificarVehiculo.setText(bundle.getString("Principal.ModificarVehiculo.text_1")); // NOI18N
         ModificarVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarVehiculoActionPerformed(evt);
@@ -134,14 +134,14 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuVehiculos.add(ModificarVehiculo);
 
-        EliminarVehiculo.setText(bundle.getString("Principal.EliminarVehiculo.text")); // NOI18N
+        EliminarVehiculo.setText(bundle.getString("Principal.EliminarVehiculo.text_1")); // NOI18N
         MenuVehiculos.add(EliminarVehiculo);
 
         jMenuBar9.add(MenuVehiculos);
 
-        MenuAlquiler.setText(bundle.getString("Principal.MenuAlquiler.text")); // NOI18N
+        MenuAlquiler.setText(bundle.getString("Principal.MenuAlquiler.text_1")); // NOI18N
 
-        SolicitarAlquiler.setText(bundle.getString("Principal.SolicitarAlquiler.text")); // NOI18N
+        SolicitarAlquiler.setText(bundle.getString("Principal.SolicitarAlquiler.text_1")); // NOI18N
         SolicitarAlquiler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SolicitarAlquilerActionPerformed(evt);
@@ -149,7 +149,7 @@ public class Principal extends javax.swing.JFrame {
         });
         MenuAlquiler.add(SolicitarAlquiler);
 
-        DevolucionVehiculo.setText(bundle.getString("Principal.DevolucionVehiculo.text")); // NOI18N
+        DevolucionVehiculo.setText(bundle.getString("Principal.DevolucionVehiculo.text_1")); // NOI18N
         MenuAlquiler.add(DevolucionVehiculo);
 
         jMenuBar9.add(MenuAlquiler);
@@ -192,6 +192,7 @@ public class Principal extends javax.swing.JFrame {
     //Pila mipila;
     Clientes client = new Clientes();
     Solicitudes solicitud = new Solicitudes();
+    ModificarCliente modificar = new ModificarCliente();
     //Test test = new Test();
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
         //Clientes client = new Clientes();
@@ -200,14 +201,21 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_RegistrarClienteActionPerformed
 
     private void ModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarClienteActionPerformed
-        client.setVisible(true);
-        client.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        modificar.setVisible(true);
+        modificar.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_ModificarClienteActionPerformed
 
     private void EliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarClienteActionPerformed
         int cedula = Integer.parseInt(JOptionPane.showInputDialog(
                 null, "Ingrese numero de cedula: "));
-        client.mipila.popModificado1(cedula);
+        if(solicitud.micola.buscar(cedula)){
+            client.mipila.popModificado(cedula);
+            JOptionPane.showMessageDialog(null,"Usuario fue"
+                + "Eliminado exitosamente");
+        }else {
+            JOptionPane.showMessageDialog(null,"Usuario no"
+                    + "puede ser eliminado");
+        }
     }//GEN-LAST:event_EliminarClienteActionPerformed
 
     private void ConsultaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultaClientesActionPerformed
@@ -294,6 +302,7 @@ public class Principal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

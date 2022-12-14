@@ -27,11 +27,10 @@ public class ModificarCliente extends javax.swing.JFrame {
         nameField.setText("");
         idField.setText("");
         emailField.setText("");
+        dateField1.setText("");
+        searchField.setText("");
+        catField2.setText("");
         
-        
-        
-        
-          
     }//esta función bloquea el espacio de la identificación
     //ya que se pide que sea el unico dato que no puede modificarse
     public void bloquear() {
@@ -39,17 +38,17 @@ public class ModificarCliente extends javax.swing.JFrame {
     }
 
         
-    public boolean eliminar(long id) {
-        boolean eliminado = false;
-        for (int i=0; i<Main.mipila.size(); i++) {
-            if (Main.mipila.get(i).getCedula() == id) {
-                Main.mipila.remove(i);
-                eliminado = true;
-            }
-        }
-        
-        return eliminado;
-    }
+//    public boolean eliminar(long id) {
+//        boolean eliminado = false;
+//        for (int i=0; i<Main.mipila.size(); i++) {
+//            if (Main.mipila.get(i).getCedula() == id) {
+//                Main.mipila.remove(i);
+//                eliminado = true;
+//            }
+//        }
+//        
+//        return eliminado;
+//    }
     
     public void guardar(){
         
@@ -71,6 +70,9 @@ public class ModificarCliente extends javax.swing.JFrame {
         searchBtn3 = new javax.swing.JButton();
         searchBtn4 = new javax.swing.JButton();
         emailField = new javax.swing.JTextField();
+        dateField1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        catField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,7 +97,7 @@ public class ModificarCliente extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Correo");
+        jLabel4.setText("Fecha");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Nombre:");
@@ -156,6 +158,23 @@ public class ModificarCliente extends javax.swing.JFrame {
             }
         });
 
+        dateField1.setEditable(false);
+        dateField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setText("Correo");
+
+        catField2.setEditable(false);
+        catField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                catField2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -177,27 +196,30 @@ public class ModificarCliente extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(searchBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(55, 55, 55)
-                                .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(searchBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(searchBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(idField, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                            .addComponent(emailField))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(emailField)
+                            .addComponent(dateField1)
+                            .addComponent(catField2))))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,21 +235,27 @@ public class ModificarCliente extends javax.swing.JFrame {
                     .addComponent(searchBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(nameField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addComponent(jLabel8)
-                .addGap(78, 78, 78))
+                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(catField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(134, 134, 134))
         );
 
         pack();
@@ -235,33 +263,53 @@ public class ModificarCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn1ActionPerformed
-        if (searchField.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Por favor "
-                    + "ingrese una identificacion para eliminar");
-        } else {
-            if (eliminar(Long.parseLong(searchField.getText()))) {
-                JOptionPane.showMessageDialog(null, 
-                        "Cliente eliminado");
-            } else {
-                JOptionPane.showMessageDialog(null,
-                        "No se encontro a este cliente");
-            }
-        }
+//        if (searchField.getText().isEmpty()) {
+//            JOptionPane.showMessageDialog(null, "Por favor "
+//                    + "ingrese una identificacion para eliminar");
+//        } else {
+//            if (eliminar(Long.parseLong(searchField.getText()))) {
+//                JOptionPane.showMessageDialog(null, 
+//                        "Cliente eliminado");
+//            } else {
+//                JOptionPane.showMessageDialog(null,
+//                        "No se encontro a este cliente");
+//            }
+//        }
     }//GEN-LAST:event_searchBtn1ActionPerformed
 
     private void searchBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn2ActionPerformed
         
+        String Nombre = nameField.getText();
+        int Cedula = Integer.parseInt(idField.getText());
+        String Fecha = dateField1.getText();
+        System.out.println(Fecha);
+        String Correo = emailField.getText();
+        System.out.println(Correo);
+        String Categoria = catField2.getText();
+        client.mipila.modificar(Cedula,Categoria,Fecha,
+                Correo,Nombre);
+        limpiar();
     }//GEN-LAST:event_searchBtn2ActionPerformed
 
     private void searchBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn3ActionPerformed
         // TODO add your handling code here:
-        limpiar();
+        //limpiar();
+        int Cedula = Integer.parseInt(searchField.getText());
+        if(client.mipila.search(Cedula)){
+            System.out.println("entro");
+            client.mipila.getAtributos(Cedula);
+            String [] array= client.mipila.getArray();
+            System.out.println(array);
+            nameField.setText(array[3]);
+            idField.setText(searchField.getText());
+            emailField.setText(array[1]);
+            dateField1.setText(array[2]);
+            catField2.setText(array[0]);
+        }else{
                 JOptionPane.showMessageDialog(null, 
                         "Cliente no existe");
-
-            JOptionPane.showMessageDialog(null, "Por favor "
-                    + "ingrese una identificacion");
-
+                limpiar();
+        }
     }//GEN-LAST:event_searchBtn3ActionPerformed
 
     private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
@@ -273,7 +321,10 @@ public class ModificarCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_idFieldActionPerformed
 
     private void searchBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn4ActionPerformed
-        // TODO add your handling code here:
+        nameField.setEditable(true);
+        emailField.setEditable(true);
+        dateField1.setEditable(true);
+        catField2.setEditable(true);
     }//GEN-LAST:event_searchBtn4ActionPerformed
 
     private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
@@ -283,6 +334,14 @@ public class ModificarCliente extends javax.swing.JFrame {
     private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailFieldActionPerformed
+
+    private void dateField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateField1ActionPerformed
+
+    private void catField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_catField2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -310,6 +369,7 @@ public class ModificarCliente extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ModificarCliente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -320,11 +380,14 @@ public class ModificarCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField catField2;
+    private javax.swing.JTextField dateField1;
     private javax.swing.JTextField emailField;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nameField;
