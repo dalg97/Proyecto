@@ -12,6 +12,7 @@ public class Lista {
 
     private Nodo2 cabeza;
     //private Nodo2 ultimo;
+    private String array [] = new String [10];
 
     public void insertar(Vehiculo vehiculo) {
         if (cabeza == null) {
@@ -163,6 +164,37 @@ public class Lista {
     }
         return exist;
   }
+    public String[] getArray() {
+        return array;
+}
+    public void getAtributos(String placa){
+        Nodo2 aux = cabeza;
+        // Bandera para verificar si exist el elemento a search.
+        // Recorre la pila hasta llegar encontrar el node o llegar al final
+        // de la pila.
+        while (aux != null) {
+            // Compara si el value del node es igual que al de reference.
+            if (placa == aux.getVehiculo().getPlaca()) {
+                // Cambia el value de la bandera.
+                array[0] = aux.getVehiculo().getPlaca();
+                array[1] = aux.getVehiculo().getColor();
+                array[2] = aux.getVehiculo().getExtras();
+                array[3] = aux.getVehiculo().getEstado();
+                array[4] = aux.getVehiculo().getMarca();
+                array[5] = aux.getVehiculo().getCombustible();
+                array[6] = (String.valueOf(aux.getVehiculo().getPasajeros()));
+                array[7] = (String.valueOf(aux.getVehiculo().getCilidrada()));
+                array[8] = (String.valueOf(aux.getVehiculo().getPrecio()));
+                array[9] = (String.valueOf(aux.getVehiculo().getAnio()));
+                array[10] = (aux.getVehiculo().getModelo());
+                                
+                aux = null;
+            } else {
+                // Avanza al siguiente node.
+                aux = aux.getNext();
+            }
+        }
+}
 }
     
 
