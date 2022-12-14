@@ -123,38 +123,24 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
         ExtraSenReversa.setText("Sensores + Camara Reversa");
         jPanel1.add(ExtraSenReversa, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
 
-        PlacaVehiculo.setText("PQR011");
         PlacaVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PlacaVehiculoActionPerformed(evt);
             }
         });
         jPanel1.add(PlacaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 60, -1));
-
-        MarcaVehiculo.setText("Volkswagen");
         jPanel1.add(MarcaVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 90, -1));
-
-        ModeloVehiculo.setText("Jetta");
         jPanel1.add(ModeloVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 90, -1));
-
-        AñoVehiculo.setText("1997");
         jPanel1.add(AñoVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 60, -1));
 
-        ColorVehiculo.setText("Negro");
         ColorVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ColorVehiculoActionPerformed(evt);
             }
         });
         jPanel1.add(ColorVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, -1, -1));
-
-        CCVehiculo.setText("2000");
         jPanel1.add(CCVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
-
-        CombustibleVehiculo.setText("Gasolina");
         jPanel1.add(CombustibleVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
-
-        CantPasajerosVehiculo.setText("5");
         jPanel1.add(CantPasajerosVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, -1, -1));
 
         PrecioAlquilerVehiculo.setText("45000");

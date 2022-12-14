@@ -220,9 +220,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="PlacaVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="PQR011"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlacaVehiculoActionPerformed"/>
           </Events>
@@ -233,9 +230,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="MarcaVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Volkswagen"/>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="420" y="140" width="90" height="-1"/>
@@ -243,9 +237,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="ModeloVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Jetta"/>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="420" y="180" width="90" height="-1"/>
@@ -253,9 +244,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="A&#xf1;oVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1997"/>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="420" y="220" width="60" height="-1"/>
@@ -263,9 +251,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="ColorVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Negro"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ColorVehiculoActionPerformed"/>
           </Events>
@@ -276,9 +261,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="CCVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="2000"/>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="420" y="300" width="-1" height="-1"/>
@@ -286,9 +268,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="CombustibleVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gasolina"/>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="420" y="340" width="-1" height="-1"/>
@@ -296,9 +275,6 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="CantPasajerosVehiculo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="5"/>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="640" y="100" width="-1" height="-1"/>
