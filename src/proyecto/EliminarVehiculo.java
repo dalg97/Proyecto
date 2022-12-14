@@ -212,7 +212,7 @@ public class EliminarVehiculo extends javax.swing.JFrame {
         {
 
         }
-        JOptionPane.showMessageDialog(null, "Vehiculo fue Eliminado "
+        JOptionPane.showMessageDialog(null,"Vehiculo fue Eliminado"
                 + "exitosamente");
         limpiarPlaca();
     }//GEN-LAST:event_EliminarActionPerformed

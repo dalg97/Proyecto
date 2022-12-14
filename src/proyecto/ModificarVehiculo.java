@@ -362,7 +362,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         {
 
         }
-        JOptionPane.showMessageDialog(null, "Vehiculo fue Modificado "
+       JOptionPane.showMessageDialog(null,"Vehiculo fue Modificado"
                 + "exitosamente");
         limpiarVehiculos();
 
