@@ -196,6 +196,7 @@ public class Solicitudes extends javax.swing.JFrame {
     }//GEN-LAST:event_ModeloSolicitudActionPerformed
 
     private void CrearSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearSolicitudActionPerformed
+        //Insertar los campos dentro de la cola
         int Cedula = Integer.parseInt(CedulaSolicitud.getText());
        System.out.println(Cedula);
        String Fecha = FechaSolicitud.getText();
@@ -206,28 +207,32 @@ public class Solicitudes extends javax.swing.JFrame {
        String Modelo = ModeloSolicitud.getText();
        double iva = (Dias*15000)*0.13;
        double alquiler = (Dias*15000) + iva;
-       //System.out.println(client.mipila.search1(Cedula));
        if(client.mipila.search(Cedula)){
+           //si existe el cliente, ingresa al if
            String Categoria = client.mipila.mostrarCategoria(Cedula);
            if(SinLlave.isSelected()){
+               //si marca el extra sin llave, ingrese al if
                 String Extras = "Arranque sin llave";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
                Extras,Categoria,alquiler));
                 SubirCategoria(Cedula,Categoria,alquiler);
             }else if(Cargador.isSelected()){
+                //si marca el extra cargador, ingrese al if
                 String Extras = "Cargador Inalambrico";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
                Extras,Categoria,alquiler));
                 SubirCategoria(Cedula,Categoria,alquiler);
             }else if(GPS.isSelected()){
+                //si marca el extra gps, ingrese al if
                 String Extras = "GPS - Navegador en tiempo real";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
                Extras,Categoria,alquiler));
                 SubirCategoria(Cedula,Categoria,alquiler);
             }else{
+                //si marca el extra sensor, ingrese al if
                 String Extras = "Sensores + Camara reversa";
                 micola.encola(new Solicitud(Cedula,Fecha,Dias,
                Estado,Pasajeros,Marca,Modelo,
@@ -240,8 +245,9 @@ public class Solicitudes extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null,
                    "Usuario no existe");
        }
-       limpiarSolicitudes(); 
+       limpiarSolicitudes(); //limpiar campos
     }//GEN-LAST:event_CrearSolicitudActionPerformed
+    //Metodo para subir de categoria
     private void SubirCategoria(int Cedula,String Categoria,double precio){
         if(precio > 70000){
             if(Categoria == "Oro"){
