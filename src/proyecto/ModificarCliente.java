@@ -14,8 +14,9 @@ public class ModificarCliente extends javax.swing.JFrame {
         initComponents();
         setTitle(" Modificar Cliente");    
     }
+    //Agregar objeto cliente para jalar los atributos
     Clientes client = new Clientes();
-
+    //limpiar los campos
     public void limpiar() {
         nameField.setText("");
         idField.setText("");
@@ -231,7 +232,7 @@ public class ModificarCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn2ActionPerformed
-        
+        //Agregar los valores a la pila
         String Nombre = nameField.getText();
         int Cedula = Integer.parseInt(idField.getText());
         String Fecha = dateField1.getText();
@@ -246,7 +247,7 @@ public class ModificarCliente extends javax.swing.JFrame {
 
     private void searchBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn3ActionPerformed
         // TODO add your handling code here:
-        //limpiar();
+        //Setear los valores que ya tiene el cliente
         int Cedula = Integer.parseInt(searchField.getText());
         if(client.mipila.search(Cedula)){
             System.out.println("entro");

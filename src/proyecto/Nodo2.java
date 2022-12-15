@@ -9,7 +9,6 @@ package proyecto;
  * @author diego
  */
 public class Nodo2 {
-
     //Atributos del Nodo
     private Vehiculo vehiculo;
     private Nodo2 next;
