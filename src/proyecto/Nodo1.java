@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package proyecto;
 
 /**
@@ -9,13 +5,14 @@ package proyecto;
  * @author diego
  */
 public class Nodo1 {
+    //Atributos del nodo
     private Cliente cliente;
     private Nodo1 siguiente;
-
+    
     public Nodo1(Cliente cliente){
         this.cliente = cliente;
     }
-    
+    //Setters and Getters
     public Cliente getCliente() {
         return cliente;
     }
@@ -31,5 +28,4 @@ public class Nodo1 {
     public void setSiguiente(Nodo1 siguiente) {
         this.siguiente = siguiente;
     }
-
 }
