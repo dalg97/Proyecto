@@ -192,7 +192,7 @@ public class Principal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    //Pila mipila;
+    //crear los objetos para jalar las estructuras
     Clientes client = new Clientes();
     Solicitudes solicitud = new Solicitudes();
     ModificarCliente modificar = new ModificarCliente();
@@ -263,14 +263,16 @@ public class Principal extends javax.swing.JFrame {
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
         int answer = JOptionPane.showConfirmDialog(null,
-                "¿Está seguro de Salir?", " Salir ", JOptionPane.YES_NO_OPTION);
+                "¿Está seguro de Salir?", " Salir ", 
+                JOptionPane.YES_NO_OPTION);
         if (answer == 0) {
             dispose();
     }//GEN-LAST:event_SalirActionPerformed
     }
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         int answer = JOptionPane.showConfirmDialog(null,
-                "¿Está seguro de Salir?", " Salir ", JOptionPane.YES_NO_OPTION);
+                "¿Está seguro de Salir?", " Salir ",
+                JOptionPane.YES_NO_OPTION);
         if (answer == 0) {
             dispose();
     }//GEN-LAST:event_formWindowClosing
