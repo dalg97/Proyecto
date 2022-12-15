@@ -258,8 +258,8 @@ public class RegistrarVehiculo extends javax.swing.JFrame {
                     Color,cilindrada,combustible,pasajeros,
                     precio,extras,estado)); 
         }
-        JOptionPane.showMessageDialog(null, "Vehiculo fue Registrado "
-                + "exitosamente");
+        JOptionPane.showMessageDialog(null,"Vehiculo fue Registrado"
+                + " exitosamente");
         limpiarVehiculos();
     }//GEN-LAST:event_BT_GuardarActionPerformed
 

@@ -188,7 +188,7 @@ public class Pila {
                 }
             }            
         }else{
-            System.out.println("El nodo indicado no existe");
+            System.out.println("El Cliente no existe");
         }
     }
 }

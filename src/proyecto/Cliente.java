@@ -9,12 +9,14 @@ package proyecto;
  * @author diego
  */
 public class Cliente {
+    //Atributos Cliente
     private int Cedula;
     private String Nombre;
     private String Fecha;
     private String Correo;
     private String Categoria;
     
+    //Constructor
     public Cliente(int cedula,String nombre,String fecha,String correo,String
             categoria){
         this.Cedula = cedula;
@@ -23,7 +25,7 @@ public class Cliente {
         this.Correo = correo;
         this.Categoria = categoria;
     }
-
+    //Setters and Getters
     public void setCedula(int Cedula) {
         this.Cedula = Cedula;
     }
@@ -63,7 +65,7 @@ public class Cliente {
     public String getCategoria() {
         return Categoria;
     }
-    
+    //Override
     @Override
     public String toString(){
         return "Cliente{" + "Nombre="+Nombre+", Cedula="+Cedula+

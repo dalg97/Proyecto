@@ -161,6 +161,7 @@ public class Clientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    //Llamar a la pila
     static Pila mipila = new Pila();
     private void OroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OroActionPerformed
         Oro.setSelected(true);
@@ -179,6 +180,7 @@ public class Clientes extends javax.swing.JFrame {
     }//GEN-LAST:event_ZafiroActionPerformed
 
     private void RegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarClienteActionPerformed
+        //Obtener los datos ingresados por los usuarios
         String Nombre = NombreCliente.getText();
         int Cedula = Integer.parseInt(CedulaCliente.getText());
         String Fecha = FechaCliente.getText();

@@ -285,7 +285,7 @@ public class ModificarVehiculo extends javax.swing.JFrame {
         }
 
        JOptionPane.showMessageDialog(null,"Vehiculo fue Modificado"
-                + "exitosamente");
+                + " exitosamente");
         limpiarVehiculos();
 
     }//GEN-LAST:event_BT_ActualizarActionPerformed

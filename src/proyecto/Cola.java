@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package proyecto;
 
 import javax.swing.JOptionPane;
@@ -11,23 +8,26 @@ import javax.swing.JOptionPane;
  * @author diego
  */
 public class Cola {
+    //Atributos de la Cola
     private Nodo3 frente;
     private Nodo3 ultimo;
 
     public Cola() {
     }
-    
+    //Metodo encolar
     public void encola(Solicitud solicitud){
         Nodo3 newnode = new Nodo3(solicitud); 
         if(frente == null){  // significa que la cola esta vacia
             frente = newnode;
             ultimo = newnode;
         }else if(solicitud.getCategoria() == "Zafiro"){
+            //Si es Zafiro, lo agrega de primero
             Nodo3 aux = frente;
             frente = newnode;
             frente.setAtras(aux);
         }else if(solicitud.getCategoria() == "Oro" && 
                 frente.getSolicitud().getCategoria() != "Zafiro"){
+            //Si es 
             Nodo3 aux = frente;
             frente = newnode;
             frente.setAtras(aux);
